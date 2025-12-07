@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4d4d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e4e4e7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="url(#bgGradient4)"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="120" font-size="56" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="Arial, sans-serif">
+    Laptop Rental
+  </text>
+  <text x="600" y="190" font-size="56" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="Arial, sans-serif">
+    Management System
+  </text>
+  
+  <!-- Left Laptop - Secure User Authentication -->
+  <g transform="translate(100, 320)">
+    <!-- Laptop body -->
+    <rect x="0" y="0" width="320" height="200" rx="12" fill="#1e3a5f"/>
+    
+    <!-- Laptop screen -->
+    <rect x="8" y="8" width="304" height="160" rx="8" fill="#0f172a"/>
+    
+    <!-- Screen label -->
+    <text x="160" y="30" font-size="12" fill="#0ea5e9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+      SECURE USER
+    </text>
+    <text x="160" y="45" font-size="12" fill="#0ea5e9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+      AUTHENTICATION
+    </text>
+    
+    <!-- Phone mockup on screen -->
+    <rect x="40" y="60" width="100" height="80" rx="8" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="2"/>
+    
+    <!-- Lock icon -->
+    <rect x="70" y="70" width="40" height="35" rx="3" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+    <path d="M 75 70 L 75 60 Q 75 55 80 55 Q 85 55 85 60 L 85 70" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Login form fields -->
+    <g opacity="0.6">
+      <rect x="50" y="115" width="80" height="6" fill="#0ea5e9" rx="3"/>
+      <rect x="50" y="128" width="80" height="6" fill="#0ea5e9" rx="3"/>
+    </g>
+    
+    <!-- Login button -->
+    <rect x="60" y="142" width="60" height="8" rx="4" fill="#22c55e"/>
+    
+    <!-- Keyboard -->
+    <rect x="0" y="168" width="320" height="32" fill="#16213e"/>
+    <line x1="0" y1="168" x2="320" y2="168" stroke="#1e3a5f" stroke-width="1"/>
+  </g>
+  
+  <!-- Center Laptop - Inventory Tracking -->
+  <g transform="translate(420, 280)">
+    <!-- Laptop body -->
+    <rect x="0" y="0" width="360" height="240" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    
+    <!-- Laptop screen -->
+    <rect x="12" y="12" width="336" height="192" rx="8" fill="#ffffff"/>
+    
+    <!-- Screen label -->
+    <text x="180" y="45" font-size="14" fill="#0f172a" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+      INVENTORY TRACKING
+    </text>
+    
+    <!-- Calendar icon -->
+    <g transform="translate(100, 75)">
+      <rect x="0" y="0" width="50" height="50" rx="4" fill="#1e3a5f" opacity="0.1" stroke="#1e3a5f" stroke-width="2"/>
+      <line x1="5" y1="12" x2="45" y2="12" stroke="#1e3a5f" stroke-width="2"/>
+      <line x1="10" y1="18" x2="15" y2="18" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="20" y1="18" x2="25" y2="18" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="30" y1="18" x2="35" y2="18" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="10" y1="28" x2="15" y2="28" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="20" y1="28" x2="25" y2="28" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="30" y1="28" x2="35" y2="28" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="10" y1="38" x2="15" y2="38" stroke="#1e3a5f" stroke-width="1"/>
+      <line x1="20" y1="38" x2="25" y2="38" stroke="#1e3a5f" stroke-width="1"/>
+      <!-- Checkmark -->
+      <path d="M 35 32 L 40 38 L 48 25" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Barcode -->
+    <g transform="translate(200, 75)">
+      <text x="25" y="15" font-size="11" text-anchor="middle" fill="#0f172a" font-family="Arial, sans-serif" font-weight="bold">
+        1FF546786356
+      </text>
+      <g opacity="0.5">
+        <line x1="0" y1="25" x2="3" y2="35" stroke="#0f172a" stroke-width="1"/>
+        <line x1="8" y1="25" x2="8" y2="35" stroke="#0f172a" stroke-width="2"/>
+        <line x1="14" y1="25" x2="14" y2="35" stroke="#0f172a" stroke-width="1"/>
+        <line x1="20" y1="25" x2="20" y2="35" stroke="#0f172a" stroke-width="1"/>
+        <line x1="26" y1="25" x2="26" y2="35" stroke="#0f172a" stroke-width="2"/>
+        <line x1="32" y1="25" x2="32" y2="35" stroke="#0f172a" stroke-width="1"/>
+        <line x1="38" y1="25" x2="38" y2="35" stroke="#0f172a" stroke-width="1"/>
+        <line x1="44" y1="25" x2="44" y2="35" stroke="#0f172a" stroke-width="2"/>
+        <line x1="50" y1="25" x2="50" y2="35" stroke="#0f172a" stroke-width="1"/>
+      </g>
+    </g>
+    
+    <!-- Stats section -->
+    <g transform="translate(100, 145)">
+      <text x="90" y="20" font-size="12" fill="#0f172a" font-family="Arial, sans-serif" font-weight="bold">
+        Active Rentals: 24
+      </text>
+      <text x="90" y="40" font-size="12" fill="#0f172a" font-family="Arial, sans-serif" font-weight="bold">
+        Available: 18
+      </text>
+      <text x="90" y="60" font-size="12" fill="#0f172a" font-family="Arial, sans-serif" font-weight="bold">
+        Maintenance: 3
+      </text>
+    </g>
+    
+    <!-- Keyboard -->
+    <rect x="0" y="204" width="360" height="36" fill="#e5e7eb"/>
+    <line x1="0" y1="204" x2="360" y2="204" stroke="#d1d5db" stroke-width="1"/>
+  </g>
+  
+  <!-- Right Laptop - Rental Management -->
+  <g transform="translate(880, 320)">
+    <!-- Laptop body -->
+    <rect x="0" y="0" width="320" height="200" rx="12" fill="#1e3a5f"/>
+    
+    <!-- Laptop screen -->
+    <rect x="8" y="8" width="304" height="160" rx="8" fill="#0f172a"/>
+    
+    <!-- Screen label -->
+    <text x="160" y="30" font-size="12" fill="#0ea5e9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+      RENTAL
+    </text>
+    <text x="160" y="45" font-size="12" fill="#0ea5e9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+      MANAGEMENT
+    </text>
+    
+    <!-- Laptop icon -->
+    <g transform="translate(160, 75)">
+      <rect x="-35" y="0" width="70" height="45" rx="2" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+      <rect x="-30" y="5" width="60" height="35" fill="#0ea5e9" opacity="0.2"/>
+      <line x1="-35" y1="45" x2="35" y2="45" stroke="#0ea5e9" stroke-width="2"/>
+      <line x1="-10" y1="45" x2="10" y2="55" stroke="#0ea5e9" stroke-width="2"/>
+    </g>
+    
+    <!-- Status indicators -->
+    <g opacity="0.6">
+      <circle cx="80" cy="130" r="4" fill="#22c55e"/>
+      <text x="92" y="135" font-size="10" fill="#0ea5e9" font-family="Arial, sans-serif">Active</text>
+      
+      <circle cx="80" cy="145" r="4" fill="#fbbf24"/>
+      <text x="92" y="150" font-size="10" fill="#0ea5e9" font-family="Arial, sans-serif">Pending</text>
+      
+      <circle cx="200" cy="130" r="4" fill="#ef4444"/>
+      <text x="212" y="135" font-size="10" fill="#0ea5e9" font-family="Arial, sans-serif">Overdue</text>
+    </g>
+    
+    <!-- Keyboard -->
+    <rect x="0" y="168" width="320" height="32" fill="#16213e"/>
+    <line x1="0" y1="168" x2="320" y2="168" stroke="#1e3a5f" stroke-width="1"/>
+  </g>
+  
+  <!-- Decorative element -->
+  <circle cx="1150" cy="600" r="50" fill="#22c55e" opacity="0.05"/>
+</svg>
