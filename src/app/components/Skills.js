@@ -10,7 +10,8 @@ import {
     FaGitAlt, 
     FaAws, 
     FaWindows, 
-    FaUbuntu 
+    FaUbuntu,
+    FaNetworkWired
 } from "react-icons/fa";
 import { 
     SiJavascript, 
@@ -22,10 +23,8 @@ import {
     SiFlask, 
     SiMaterialdesign, 
     SiVisualstudiocode, 
-    SiDart,
-    SiNetworksolutions
+    SiDart
 } from "react-icons/si";
-import { TbBrandCpp } from "react-icons/tb";
 
 const Skills = () => {
     const skillCategories = [
@@ -66,7 +65,7 @@ const Skills = () => {
             title: "Cloud & Networking",
             skills: [
                 { name: "AWS", icon: FaAws, color: "#FF9900" },
-                { name: "Computer Networks", icon: SiNetworksolutions, color: "#0078D7" },
+                { name: "Computer Networks", icon: FaNetworkWired, color: "#0078D7" },
             ],
             gradient: "from-sky-500 to-blue-500",
         },
