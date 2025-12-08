@@ -11,7 +11,8 @@ import {
     FaAws, 
     FaWindows, 
     FaUbuntu,
-    FaNetworkWired
+    FaNetworkWired,
+    FaDatabase
 } from "react-icons/fa";
 import { 
     SiJavascript, 
@@ -21,7 +22,7 @@ import {
     SiMongodb, 
     SiExpress, 
     SiFlask, 
-    SiMaterialdesign, 
+    SiMui, 
     SiVisualstudiocode, 
     SiDart
 } from "react-icons/si";
@@ -36,7 +37,7 @@ const Skills = () => {
                 { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
                 { name: "C", icon: SiC, color: "#A8B9CC" },
                 { name: "PHP", icon: SiPhp, color: "#777BB4" },
-                { name: "SQL", icon: SiMysql, color: "#4479A1" },
+                { name: "SQL", icon: FaDatabase, color: "#4479A1" },
                 { name: "Dart", icon: SiDart, color: "#0175C2" },
             ],
             gradient: "from-purple-500 to-pink-500",
@@ -49,7 +50,7 @@ const Skills = () => {
                 { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
                 { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
                 { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
-                { name: "Material UI", icon: SiMaterialdesign, color: "#0081CB" },
+                { name: "Material UI", icon: SiMui, color: "#0081CB" },
             ],
             gradient: "from-blue-500 to-cyan-500",
         },
