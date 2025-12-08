@@ -11,8 +11,7 @@ import {
     FaWindows, 
     FaUbuntu,
     FaNetworkWired,
-    FaDatabase,
-    FaCode
+    FaDatabase
 } from "react-icons/fa";
 import { 
     SiJavascript, 
