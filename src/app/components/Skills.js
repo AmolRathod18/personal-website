@@ -185,20 +185,6 @@ const Skills = () => {
                     </div>
                 </motion.div>
 
-                {/* Technologies & Tools Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="mb-12 text-center"
-                >
-                    <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent mb-4">
-                        Technologies <span className="text-sky-400">&</span> Tools
-                    </h3>
-                    <div className="h-1 w-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full mx-auto"></div>
-                </motion.div>
-
                 {/* Animated Technology Icons */}
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
