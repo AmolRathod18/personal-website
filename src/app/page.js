@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import Education from "./components/Education";
+import Skills from "./components/Skills";
 import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -171,6 +172,9 @@ export default function Home() {
                 </section>
                 <section id="education">
                     <Education />
+                </section>
+                <section id="skills">
+                    <Skills />
                 </section>
                 <section id="technologies">
                     <Technologies />
