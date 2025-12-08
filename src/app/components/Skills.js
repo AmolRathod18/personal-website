@@ -11,11 +11,11 @@ import {
     FaWindows, 
     FaUbuntu,
     FaNetworkWired,
-    FaDatabase
+    FaDatabase,
+    FaCode
 } from "react-icons/fa";
 import { 
     SiJavascript, 
-    SiCplusplus,
     SiPhp, 
     SiMysql,
     SiMongodb, 
@@ -35,7 +35,7 @@ const Skills = () => {
                 { name: "Java", icon: SiJava, color: "#007396" },
                 { name: "Python", icon: FaPython, color: "#3776AB" },
                 { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-                { name: "C", icon: SiCplusplus, color: "#A8B9CC" },
+                { name: "C", icon: FaCode, color: "#A8B9CC" },
                 { name: "PHP", icon: SiPhp, color: "#777BB4" },
                 { name: "SQL", icon: FaDatabase, color: "#4479A1" },
                 { name: "Dart", icon: SiDart, color: "#0175C2" },
