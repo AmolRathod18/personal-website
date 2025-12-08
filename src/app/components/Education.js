@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { FaGraduationCap, FaCalendar, FaAward } from "react-icons/fa6";
+import { FaGraduationCap, FaCalendar, FaAward, FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 const Education = () => {
     const education = [
@@ -11,7 +12,9 @@ const Education = () => {
             period: "2023 – 2025",
             achievement: "CGPA: 7.2",
             description: "Advanced coursework in software engineering, databases, cloud platforms, and cybersecurity.",
-            icon: "🎓"
+            icon: "🎓",
+            logo: "/images/kle-logo.png",
+            website: "https://www.kletech.ac.in/"
         },
         {
             degree: "Bachelor of Science (Computer Science)",
@@ -19,7 +22,9 @@ const Education = () => {
             period: "2020 – 2023",
             achievement: "Percentage: 76.57%",
             description: "Foundation in computer science, programming, data structures, and algorithms.",
-            icon: "📚"
+            icon: "📚",
+            logo: "/images/ksc-logo.png",
+            website: "https://karnatakaarts.ac.in/"
         },
         {
             degree: "Pre-University Course (PUC)",
@@ -27,7 +32,9 @@ const Education = () => {
             period: "2020",
             achievement: "Percentage: 65.33%",
             description: "Core science subjects with focus on mathematics and computer science.",
-            icon: "🏫"
+            icon: "🏫",
+            logo: "/images/puc-logo.png",
+            website: "#"
         },
         {
             degree: "Secondary School (SSLC)",
@@ -35,7 +42,9 @@ const Education = () => {
             period: "2018",
             achievement: "Percentage: 78.56%",
             description: "Strong foundation in academics and early interest in technology.",
-            icon: "✏️"
+            icon: "✏️",
+            logo: "/images/school-logo.png",
+            website: "#"
         }
     ];
 
@@ -75,13 +84,34 @@ const Education = () => {
 
                             {/* Card */}
                             <div className="flex gap-6">
-                                {/* Timeline Dot */}
-                                <motion.div
-                                    whileHover={{ scale: 1.2 }}
-                                    className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-sky-600 flex items-center justify-center text-2xl shadow-lg hover:shadow-sky-500/50 transition-shadow"
+                                {/* College Logo - Clickable */}
+                                <motion.a
+                                    href={edu.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ scale: 1.1, rotate: 5 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-2 border-sky-500/30 hover:border-sky-400 flex items-center justify-center shadow-lg hover:shadow-sky-500/50 transition-all duration-300 cursor-pointer group relative overflow-hidden"
                                 >
-                                    {edu.icon}
-                                </motion.div>
+                                    {/* Glossy overlay effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    
+                                    {/* Logo Image */}
+                                    <div className="relative z-10 w-16 h-16 flex items-center justify-center">
+                                        <Image 
+                                            src={edu.logo} 
+                                            alt={`${edu.institution} logo`}
+                                            width={64}
+                                            height={64}
+                                            className="object-contain rounded-lg group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                    </div>
+                                    
+                                    {/* External link icon */}
+                                    <div className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <FaExternalLinkAlt className="text-sky-400 text-xs" />
+                                    </div>
+                                </motion.a>
 
                                 {/* Content */}
                                 <motion.div
