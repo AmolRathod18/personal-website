@@ -18,7 +18,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
     {
         title: "Network Prevention & Detection with Honeypot",
-        image: "/images/honeypot.svg",
+        image: "/images/honeypot.jpg",
         description:
             "Advanced cybersecurity project implementing honeypot technology for network intrusion detection and prevention. Monitors malicious activities, logs attack patterns, and provides real-time threat analysis to enhance network security infrastructure.",
         technologies: ["Python", "Network Security", "Intrusion Detection", "Honeypot", "Cybersecurity"],

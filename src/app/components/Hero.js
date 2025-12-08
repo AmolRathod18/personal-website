@@ -14,15 +14,16 @@ const container = (delay) => ({
         x: 0,
         opacity: 1,
         transition: {
-            duration: 0.5,
+            duration: 0.3,
             delay: delay,
+            ease: "easeOut",
         },
     },
 });
 
 export const Hero = () => {
     return (
-        <div className="border-b border-neutral-800 pb-20 relative overflow-hidden min-h-screen flex items-center">
+        <div className="border-b border-neutral-800 pb-20 lg:pb-28 relative overflow-hidden min-h-screen flex items-center -mt-4">
             {/* Gradient Background Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black pointer-events-none"></div>
             
@@ -43,7 +44,7 @@ export const Hero = () => {
                 className="absolute top-1/2 right-1/4 w-24 h-24 bg-pink-500/30 rounded-full blur-2xl"
             />
             
-            <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-8">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                     {/* Left Content */}
                     <div className="flex-1 text-center lg:text-left">
@@ -60,7 +61,7 @@ export const Hero = () => {
                             variants={container(0.2)}
                             initial="hidden"
                             animate="visible"
-                            className="text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-6"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-6"
                         >
                             <span className="bg-gradient-to-r from-white via-sky-200 to-white bg-clip-text text-transparent">
                                 Amol Rathod
