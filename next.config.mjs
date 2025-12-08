@@ -5,7 +5,19 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'encrypted-tbn0.gstatic.com',
+                hostname: 'www.kletech.ac.in',
+            },
+            {
+                protocol: 'https',
+                hostname: 'kscd.ac.in',
+            },
+            {
+                protocol: 'https',
+                hostname: 'sspharmacycollege.in',
+            },
+            {
+                protocol: 'https',
+                hostname: 'placehold.co',
             },
         ],
     },
