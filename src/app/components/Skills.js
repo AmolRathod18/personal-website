@@ -23,7 +23,6 @@ import {
     SiExpress, 
     SiFlask, 
     SiMaterialdesignicons, 
-    SiVisualstudio, 
     SiDart
 } from "react-icons/si";
 
@@ -73,7 +72,7 @@ const Skills = () => {
         {
             title: "Developer Tools",
             skills: [
-                { name: "VS Code", icon: SiVisualstudio, color: "#007ACC" },
+                { name: "VS Code", icon: FaCode, color: "#007ACC" },
                 { name: "Git", icon: FaGitAlt, color: "#F05032" },
             ],
             gradient: "from-orange-500 to-red-500",
