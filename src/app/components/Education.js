@@ -13,7 +13,7 @@ const Education = () => {
             achievement: "CGPA: 7.2",
             description: "Advanced coursework in software engineering, databases, cloud platforms, and cybersecurity.",
             icon: "🎓",
-            logo: "/images/kle-logo.png",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxWjhKHLe5wl8jQqV7wQ0VZLCWvHaVzGfqZg&s",
             website: "https://www.kletech.ac.in/"
         },
         {
@@ -23,8 +23,8 @@ const Education = () => {
             achievement: "Percentage: 76.57%",
             description: "Foundation in computer science, programming, data structures, and algorithms.",
             icon: "📚",
-            logo: "/images/ksc-logo.png",
-            website: "https://karnatakaarts.ac.in/"
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV8wL3nKPXOy3pzVRBGJKBJGZNEWv7Fmzm6g&s",
+            website: "https://kscd.ac.in/department_BCA_BSC(CS)1.php"
         },
         {
             degree: "Pre-University Course (PUC)",
@@ -33,8 +33,8 @@ const Education = () => {
             achievement: "Percentage: 65.33%",
             description: "Core science subjects with focus on mathematics and computer science.",
             icon: "🏫",
-            logo: "/images/puc-logo.png",
-            website: "#"
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqe3kMZzQYOXwqNmzk8vPqHKRzBoE0xJEqg&s",
+            website: "https://sspharmacycollege.in/"
         },
         {
             degree: "Secondary School (SSLC)",
@@ -43,8 +43,8 @@ const Education = () => {
             achievement: "Percentage: 78.56%",
             description: "Strong foundation in academics and early interest in technology.",
             icon: "✏️",
-            logo: "/images/school-logo.png",
-            website: "#"
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh4QY7kJx7HH3h-JDLyYLqFfCYYJWLGf8ucA&s",
+            website: "https://schools.org.in/vijayapura/29030823304/govt-high-school-indi.html"
         }
     ];
 
