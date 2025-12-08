@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { Footer } from "./components/atoms/Footer";
+import ScrollToTop from "./components/atoms/ScrollToTop";
 
 // Background speckles component
 const BackgroundSpeckles = ({ isHydrated }) => {
@@ -185,6 +186,9 @@ export default function Home() {
                 </section>
                 <Footer />
             </div>
+            
+            {/* Scroll to Top Button */}
+            <ScrollToTop />
         </div>
     );
 }
