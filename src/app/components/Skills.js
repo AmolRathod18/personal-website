@@ -12,7 +12,8 @@ import {
     FaUbuntu,
     FaNetworkWired,
     FaDatabase,
-    FaCode
+    FaCode,
+    FaJava
 } from "react-icons/fa";
 import { 
     SiJavascript, 
@@ -21,10 +22,9 @@ import {
     SiMongodb, 
     SiExpress, 
     SiFlask, 
-    SiMaterialui, 
-    SiVisualstudiocode, 
-    SiDart,
-    SiJava
+    SiMaterialdesignicons, 
+    SiVisualstudio, 
+    SiDart
 } from "react-icons/si";
 
 const Skills = () => {
@@ -32,7 +32,7 @@ const Skills = () => {
         {
             title: "Programming Languages",
             skills: [
-                { name: "Java", icon: SiJava, color: "#007396" },
+                { name: "Java", icon: FaJava, color: "#007396" },
                 { name: "Python", icon: FaPython, color: "#3776AB" },
                 { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
                 { name: "C", icon: FaCode, color: "#A8B9CC" },
@@ -50,7 +50,7 @@ const Skills = () => {
                 { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
                 { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
                 { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
-                { name: "Material UI", icon: SiMaterialui, color: "#0081CB" },
+                { name: "Material UI", icon: SiMaterialdesignicons, color: "#0081CB" },
             ],
             gradient: "from-blue-500 to-cyan-500",
         },
@@ -73,7 +73,7 @@ const Skills = () => {
         {
             title: "Developer Tools",
             skills: [
-                { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+                { name: "VS Code", icon: SiVisualstudio, color: "#007ACC" },
                 { name: "Git", icon: FaGitAlt, color: "#F05032" },
             ],
             gradient: "from-orange-500 to-red-500",
