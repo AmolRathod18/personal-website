@@ -18,6 +18,7 @@ import {
     SiJavascript, 
     SiC, 
     SiPhp, 
+    SiMysql,
     SiMongodb, 
     SiExpress, 
     SiFlask, 
