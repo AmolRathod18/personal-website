@@ -1,49 +1,89 @@
 "use client";
 
 import { motion } from "motion/react";
-import { FaCode, FaDatabase, FaCloud, FaTools, FaLaptopCode, FaCogs } from "react-icons/fa";
+import { 
+    FaJava, 
+    FaPython, 
+    FaReact, 
+    FaNodeJs, 
+    FaBootstrap, 
+    FaGitAlt, 
+    FaAws, 
+    FaWindows, 
+    FaUbuntu 
+} from "react-icons/fa";
+import { 
+    SiJavascript, 
+    SiC, 
+    SiPhp, 
+    SiMysql, 
+    SiMongodb, 
+    SiExpress, 
+    SiFlask, 
+    SiMaterialdesign, 
+    SiVisualstudiocode, 
+    SiDart,
+    SiNetworksolutions
+} from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
 
 const Skills = () => {
     const skillCategories = [
         {
             title: "Programming Languages",
-            icon: FaCode,
-            skills: ["Java", "Python", "JavaScript", "C", "PHP", "SQL", "Dart"],
+            skills: [
+                { name: "Java", icon: FaJava, color: "#007396" },
+                { name: "Python", icon: FaPython, color: "#3776AB" },
+                { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+                { name: "C", icon: SiC, color: "#A8B9CC" },
+                { name: "PHP", icon: SiPhp, color: "#777BB4" },
+                { name: "SQL", icon: SiMysql, color: "#4479A1" },
+                { name: "Dart", icon: SiDart, color: "#0175C2" },
+            ],
             gradient: "from-purple-500 to-pink-500",
         },
         {
             title: "Frameworks & Libraries",
-            icon: FaLaptopCode,
-            skills: ["React.js", "Node.js", "Express.js", "Flask", "Bootstrap", "Material UI"],
+            skills: [
+                { name: "React.js", icon: FaReact, color: "#61DAFB" },
+                { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+                { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+                { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
+                { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
+                { name: "Material UI", icon: SiMaterialdesign, color: "#0081CB" },
+            ],
             gradient: "from-blue-500 to-cyan-500",
         },
         {
             title: "Databases",
-            icon: FaDatabase,
-            skills: ["MySQL", "MongoDB"],
+            skills: [
+                { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+                { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+            ],
             gradient: "from-green-500 to-emerald-500",
         },
         {
             title: "Cloud & Networking",
-            icon: FaCloud,
-            skills: ["AWS", "Computer Networks"],
+            skills: [
+                { name: "AWS", icon: FaAws, color: "#FF9900" },
+                { name: "Computer Networks", icon: SiNetworksolutions, color: "#0078D7" },
+            ],
             gradient: "from-sky-500 to-blue-500",
         },
         {
             title: "Developer Tools",
-            icon: FaTools,
-            skills: ["Visual Studio Code", "Notepad++", "Git"],
+            skills: [
+                { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+                { name: "Git", icon: FaGitAlt, color: "#F05032" },
+            ],
             gradient: "from-orange-500 to-red-500",
-        },
-        {
-            title: "Core Concepts",
-            icon: FaCogs,
-            skills: ["Data Structures & Algorithms", "Agile Methodology"],
-            gradient: "from-indigo-500 to-purple-500",
         },
     ];
 
-    const operatingSystems = ["Windows", "Ubuntu"];
+    const operatingSystems = [
+        { name: "Windows", icon: FaWindows, color: "#0078D6" },
+        { name: "Ubuntu", icon: FaUbuntu, color: "#E95420" }
+    ];
 
     return (
         <div className="py-20 relative overflow-hidden">
@@ -95,11 +135,10 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            whileHover={{ y: -10, scale: 1.02 }}
                             className="group relative"
                         >
                             {/* Holographic Card Background */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 rounded-2xl backdrop-blur-sm border border-neutral-700 group-hover:border-cyan-500/50 transition-all duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/80 to-neutral-800/50 rounded-2xl backdrop-blur-sm border border-neutral-700 group-hover:border-cyan-500/50 transition-all duration-300"></div>
                             
                             {/* Glowing Effect */}
                             <motion.div
@@ -107,31 +146,58 @@ const Skills = () => {
                             ></motion.div>
 
                             <div className="relative p-6">
-                                {/* Icon */}
-                                <motion.div
-                                    whileHover={{ rotate: 360, scale: 1.2 }}
-                                    transition={{ duration: 0.6 }}
-                                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${category.gradient} mb-4 shadow-lg`}
-                                >
-                                    <category.icon className="text-white text-2xl" />
-                                </motion.div>
-
                                 {/* Title */}
-                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                                <h3 className="text-xl font-bold text-white mb-6 text-center group-hover:text-cyan-300 transition-colors">
                                     {category.title}
                                 </h3>
 
-                                {/* Skills */}
-                                <div className="flex flex-wrap gap-2">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <motion.span
-                                            key={skillIndex}
-                                            whileHover={{ scale: 1.1, y: -3 }}
-                                            className={`px-3 py-1.5 text-sm font-medium rounded-full bg-gradient-to-r ${category.gradient} bg-opacity-10 text-white border border-neutral-600 hover:border-cyan-400 transition-all duration-300 cursor-default backdrop-blur-sm`}
-                                        >
-                                            {skill}
-                                        </motion.span>
-                                    ))}
+                                {/* Technology Icons Grid */}
+                                <div className="grid grid-cols-3 gap-4">
+                                    {category.skills.map((skill, skillIndex) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <motion.div
+                                                key={skillIndex}
+                                                initial={{ opacity: 0, scale: 0.8 }}
+                                                whileInView={{ opacity: 1, scale: 1 }}
+                                                transition={{ delay: skillIndex * 0.05 }}
+                                                whileHover={{ scale: 1.15, y: -5 }}
+                                                className="relative group/icon"
+                                            >
+                                                {/* Neon Glow */}
+                                                <div 
+                                                    className="absolute inset-0 rounded-xl opacity-0 group-hover/icon:opacity-100 blur-lg transition-all duration-300"
+                                                    style={{ 
+                                                        boxShadow: `0 0 20px ${skill.color}80, 0 0 40px ${skill.color}40` 
+                                                    }}
+                                                ></div>
+                                                
+                                                {/* Icon Container */}
+                                                <div 
+                                                    className="relative flex items-center justify-center w-full aspect-square rounded-xl bg-gradient-to-br from-neutral-800/90 to-neutral-900/90 border border-neutral-700 group-hover/icon:border-opacity-0 backdrop-blur-md transition-all duration-300 overflow-hidden"
+                                                    style={{
+                                                        boxShadow: `inset 0 0 20px ${skill.color}20`
+                                                    }}
+                                                >
+                                                    {/* Glossy Effect */}
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"></div>
+                                                    
+                                                    {/* Icon */}
+                                                    <IconComponent 
+                                                        className="text-4xl relative z-10 transition-transform duration-300 group-hover/icon:scale-110" 
+                                                        style={{ color: skill.color }}
+                                                    />
+                                                    
+                                                    {/* Tooltip */}
+                                                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                                        <span className="text-xs font-semibold text-white bg-neutral-900/90 px-2 py-1 rounded border border-cyan-500/30">
+                                                            {skill.name}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </motion.div>
@@ -144,25 +210,58 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="relative group mb-20"
+                    className="relative group"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                     
-                    <div className="relative bg-gradient-to-br from-neutral-900/70 to-neutral-800/50 backdrop-blur-md rounded-2xl border border-cyan-500/30 p-8 text-center">
-                        <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text mb-6">
+                    <div className="relative bg-gradient-to-br from-neutral-900/70 to-neutral-800/50 backdrop-blur-md rounded-2xl border border-cyan-500/30 p-8">
+                        <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text mb-8 text-center">
                             Operating Systems
                         </h3>
-                        <div className="flex justify-center gap-6">
-                            {operatingSystems.map((os, index) => (
-                                <motion.div
-                                    key={index}
-                                    whileHover={{ scale: 1.15, rotate: 5 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300 cursor-default"
-                                >
-                                    {os}
-                                </motion.div>
-                            ))}
+                        <div className="flex justify-center gap-8">
+                            {operatingSystems.map((os, index) => {
+                                const IconComponent = os.icon;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        whileHover={{ scale: 1.2, y: -10 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="relative group/os"
+                                    >
+                                        {/* Neon Glow */}
+                                        <div 
+                                            className="absolute inset-0 rounded-2xl opacity-0 group-hover/os:opacity-100 blur-2xl transition-all duration-300"
+                                            style={{ 
+                                                boxShadow: `0 0 30px ${os.color}80, 0 0 60px ${os.color}40` 
+                                            }}
+                                        ></div>
+                                        
+                                        {/* OS Icon Container */}
+                                        <div 
+                                            className="relative flex items-center justify-center w-28 h-28 rounded-2xl bg-gradient-to-br from-neutral-800/90 to-neutral-900/90 border-2 border-neutral-700 group-hover/os:border-opacity-0 backdrop-blur-md transition-all duration-300 overflow-hidden"
+                                            style={{
+                                                boxShadow: `inset 0 0 30px ${os.color}30`
+                                            }}
+                                        >
+                                            {/* Glossy Effect */}
+                                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/os:opacity-100 transition-opacity duration-300"></div>
+                                            
+                                            {/* Icon */}
+                                            <IconComponent 
+                                                className="text-6xl relative z-10 transition-transform duration-300 group-hover/os:scale-110" 
+                                                style={{ color: os.color }}
+                                            />
+                                            
+                                            {/* Label */}
+                                            <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/os:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                                <span className="text-sm font-bold text-white bg-neutral-900/90 px-3 py-1.5 rounded-lg border border-cyan-500/30">
+                                                    {os.name}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
                 </motion.div>
