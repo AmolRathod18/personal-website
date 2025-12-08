@@ -13,7 +13,7 @@ const Education = () => {
             achievement: "CGPA: 7.2",
             description: "Advanced coursework in software engineering, databases, cloud platforms, and cybersecurity.",
             icon: "🎓",
-            logo: "https://www.kletech.ac.in/wp-content/uploads/2020/12/KLE-Tech-Logo.png",
+            logo: "/images/kle-tech-logo.jpg",
             website: "https://www.kletech.ac.in/"
         },
         {
@@ -23,7 +23,7 @@ const Education = () => {
             achievement: "Percentage: 76.57%",
             description: "Foundation in computer science, programming, data structures, and algorithms.",
             icon: "📚",
-            logo: "https://kscd.ac.in/images/logo.jpg",
+            logo: "/images/karnataka-university-logo.jpg",
             website: "https://kscd.ac.in/department_BCA_BSC(CS)1.php"
         },
         {
@@ -33,7 +33,7 @@ const Education = () => {
             achievement: "Percentage: 65.33%",
             description: "Core science subjects with focus on mathematics and computer science.",
             icon: "🏫",
-            logo: "https://sspharmacycollege.in/images/logo.png",
+            logo: "/images/sri-shanteshwar-logo.jpg",
             website: "https://sspharmacycollege.in/"
         },
         {
@@ -43,7 +43,7 @@ const Education = () => {
             achievement: "Percentage: 78.56%",
             description: "Strong foundation in academics and early interest in technology.",
             icon: "✏️",
-            logo: "https://placehold.co/100x100/dc2626/white?text=GOVT+HS",
+            logo: "/images/govt-school-indi.jpg",
             website: "https://schools.org.in/vijayapura/29030823304/govt-high-school-indi.html"
         }
     ];

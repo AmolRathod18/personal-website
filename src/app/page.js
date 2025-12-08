@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import EducationHero from "./components/EducationHero";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -169,9 +170,14 @@ export default function Home() {
                 <section id="about">
                     <About />
                 </section>
-                <section id="education">
-                    <Education />
-                </section>
+            </div>
+            
+            {/* Full-width Education Hero Banners - Replaces Education Section */}
+            <section id="education" className="w-full">
+                <EducationHero />
+            </section>
+            
+            <div className="container mx-auto px-8">
                 <section id="skills">
                     <Skills />
                 </section>
