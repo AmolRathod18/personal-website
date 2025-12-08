@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { 
-    FaJava, 
     FaPython, 
     FaReact, 
     FaNodeJs, 
@@ -12,19 +11,20 @@ import {
     FaWindows, 
     FaUbuntu,
     FaNetworkWired,
-    FaDatabase
+    FaDatabase,
+    FaCode
 } from "react-icons/fa";
 import { 
     SiJavascript, 
     SiC, 
     SiPhp, 
-    SiMysql, 
     SiMongodb, 
     SiExpress, 
     SiFlask, 
     SiMui, 
     SiVisualstudiocode, 
-    SiDart
+    SiDart,
+    SiJava
 } from "react-icons/si";
 
 const Skills = () => {
@@ -32,7 +32,7 @@ const Skills = () => {
         {
             title: "Programming Languages",
             skills: [
-                { name: "Java", icon: FaJava, color: "#007396" },
+                { name: "Java", icon: SiJava, color: "#007396" },
                 { name: "Python", icon: FaPython, color: "#3776AB" },
                 { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
                 { name: "C", icon: SiC, color: "#A8B9CC" },
