@@ -2,6 +2,24 @@
 
 import { motion } from "motion/react";
 import { FaCode, FaDatabase, FaCloud, FaTools, FaLaptopCode, FaCogs } from "react-icons/fa";
+import { RiReactjsLine } from "react-icons/ri";
+import { TbBrandFlutter } from "react-icons/tb";
+import { SiMongodb, SiPostman } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { FaNodeJs, FaPython, FaUnity } from "react-icons/fa";
+
+const iconVariants = (duration) => ({
+    initial: { y: -10 },
+    animate: {
+        y: [10, -10],
+        transition: {
+            duration: duration,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse",
+        },
+    },
+});
 
 const Skills = () => {
     const skillCategories = [
@@ -144,7 +162,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="relative group"
+                    className="relative group mb-20"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                     
@@ -165,6 +183,102 @@ const Skills = () => {
                             ))}
                         </div>
                     </div>
+                </motion.div>
+
+                {/* Technologies & Tools Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="mb-12 text-center"
+                >
+                    <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent mb-4">
+                        Technologies <span className="text-sky-400">&</span> Tools
+                    </h3>
+                    <div className="h-1 w-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full mx-auto"></div>
+                </motion.div>
+
+                {/* Animated Technology Icons */}
+                <motion.div
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    className="flex flex-wrap items-center justify-center gap-4"
+                >
+                    <motion.div
+                        variants={iconVariants(2.5)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-sky-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/30"
+                    >
+                        <RiReactjsLine className="text-7xl text-[#61DAFB]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(3)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-blue-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
+                    >
+                        <TbBrandFlutter className="text-7xl text-[#02569B]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(5)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-green-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30"
+                    >
+                        <SiMongodb className="text-7xl text-[#47A248]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(2.5)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-yellow-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30"
+                    >
+                        <IoLogoFirebase className="text-7xl text-[#FFCA28]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(4)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-green-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30"
+                    >
+                        <FaNodeJs className="text-7xl text-[#339933]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(3)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-blue-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
+                    >
+                        <FaPython className="text-7xl text-[#3776AB]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(2.5)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-orange-500/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30"
+                    >
+                        <SiPostman className="text-7xl text-[#FF6C37]" />
+                    </motion.div>
+                    <motion.div
+                        variants={iconVariants(5)}
+                        initial="initial"
+                        animate="animate"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        className="rounded-2xl border-4 border-neutral-800 hover:border-white/50 p-4 bg-neutral-900/50 hover:bg-neutral-800/50 transition-all duration-300 hover:shadow-lg hover:shadow-white/30"
+                    >
+                        <FaUnity className="text-7xl text-white" />
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
