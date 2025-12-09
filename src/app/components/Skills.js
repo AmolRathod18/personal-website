@@ -166,8 +166,8 @@ const Skills = () => {
                                                 initial={{ opacity: 0, scale: 0.8 }}
                                                 whileInView={{ opacity: 1, scale: 1 }}
                                                 transition={{ delay: skillIndex * 0.05 }}
-                                                whileHover={{ scale: 1.15, y: -5 }}
-                                                className="relative group/icon"
+                                                whileHover={{ scale: 1.1, y: -5 }}
+                                                className="relative group/icon flex flex-col items-center"
                                             >
                                                 {/* Neon Glow */}
                                                 <div 
@@ -192,12 +192,14 @@ const Skills = () => {
                                                         className="text-4xl relative z-10 transition-transform duration-300 group-hover/icon:scale-110" 
                                                         style={{ color: skill.color }}
                                                     />
-                                                    
-                                                    {/* Tooltip */}
-                                                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                                                        <span className="text-xs font-semibold text-white bg-neutral-900/90 px-2 py-1 rounded border border-cyan-500/30">
-                                                            {skill.name}
-                                                        </span>
+                                                </div>
+                                                
+                                                {/* Label Below Icon */}
+                                                <div className="mt-2 text-center">
+                                                    <span className="text-xs font-semibold text-gray-300 group-hover/icon:text-white transition-colors">
+                                                        {skill.name}
+                                                    </span>
+                                                </div>
                                                     </div>
                                                 </div>
                                             </motion.div>
