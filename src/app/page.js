@@ -184,14 +184,18 @@ export default function Home() {
                 `}</style>
             </div>
 
-            <div className="container mx-auto px-8">
-                <Navbar />
-                <section id="home">
-                    <Hero />
-                </section>
-                <section id="about">
-                    <About />
-                </section>
+            <div className="w-full">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <Navbar />
+                </div>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <section id="home">
+                        <Hero />
+                    </section>
+                    <section id="about">
+                        <About />
+                    </section>
+                </div>
             </div>
             
             {/* Full-width Education Hero Banners - Replaces Education Section */}
@@ -199,7 +203,7 @@ export default function Home() {
                 <EducationHero />
             </section>
             
-            <div className="container mx-auto px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <section id="skills">
                     <Skills />
                 </section>

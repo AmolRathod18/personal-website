@@ -1,12 +1,19 @@
 "use client";
 
 import { PROJECTS } from "../constants";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import CustomButton from "./atoms/button";
 import LinkedInEmbedModal from "./atoms/LinkedIn";
+import { useState } from "react";
 
 const Projects = () => {
+    const [expandedProject, setExpandedProject] = useState(null);
+
+    const toggleProjectDetails = (index) => {
+        setExpandedProject(expandedProject === index ? null : index);
+    };
+
     return (
         <div className="pb-20 pt-10 relative">
             {/* Background Effects */}
@@ -106,9 +113,48 @@ const Projects = () => {
                                         </motion.div>
                                         
                                         {/* Description */}
-                                        <p className="text-neutral-300 text-base lg:text-lg leading-relaxed mb-6">
+                                        <p className="text-neutral-300 text-base lg:text-lg leading-relaxed mb-6 lg:block hidden">
                                             {p.description}
                                         </p>
+
+                                        {/* Mobile Expandable Description */}
+                                        <div className="lg:hidden mb-6">
+                                            <motion.button
+                                                onClick={() => toggleProjectDetails(index)}
+                                                whileTap={{ scale: 0.95 }}
+                                                className="w-full bg-gradient-to-r from-sky-600/30 to-blue-600/30 border border-sky-500/40 hover:border-sky-400 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-between"
+                                            >
+                                                <span>View Project Details</span>
+                                                <motion.svg
+                                                    className="w-5 h-5"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    animate={{ rotate: expandedProject === index ? 180 : 0 }}
+                                                    transition={{ duration: 0.3 }}
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </motion.svg>
+                                            </motion.button>
+
+                                            <AnimatePresence>
+                                                {expandedProject === index && (
+                                                    <motion.div
+                                                        initial={{ height: 0, opacity: 0 }}
+                                                        animate={{ height: "auto", opacity: 1 }}
+                                                        exit={{ height: 0, opacity: 0 }}
+                                                        transition={{ duration: 0.3 }}
+                                                        className="overflow-hidden"
+                                                    >
+                                                        <div className="mt-4 p-4 bg-neutral-900/50 rounded-xl border border-sky-500/20">
+                                                            <p className="text-neutral-300 text-sm leading-relaxed">
+                                                                {p.description}
+                                                            </p>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
                                         
                                         {/* Technologies */}
                                         <div className="mb-8">

@@ -7,26 +7,6 @@ export const Footer = () => {
     return (
         <footer className="bg-[#1a1a1a] text-white">
             <div className="w-full max-w-7xl mx-auto px-6 py-12">
-                {/* Newsletter Section */}
-                <div className="bg-gradient-to-r from-[#61dafb]/20 to-[#bb86fc]/20 rounded-2xl p-8 mb-12 border border-[#61dafb]/30">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div>
-                            <p className="text-xs uppercase tracking-wider text-[#61dafb] font-bold mb-2">NEWSLETTER</p>
-                            <h3 className="text-2xl font-bold">Subscribe to my newsletter</h3>
-                        </div>
-                        <div className="flex gap-3 w-full md:w-auto">
-                            <input
-                                type="email"
-                                placeholder="your email"
-                                className="px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#61dafb] w-full md:w-80"
-                            />
-                            <button className="px-6 py-3 bg-gradient-to-r from-[#61dafb] to-[#bb86fc] rounded-lg font-semibold hover:shadow-lg hover:shadow-[#61dafb]/50 transition-all duration-300 whitespace-nowrap">
-                                Send →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     {/* Contact Us Directly */}

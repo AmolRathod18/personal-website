@@ -200,9 +200,9 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.85 }}
-                    className="bg-gradient-to-br from-blue-500 to-blue-600 p-2 rounded-lg text-white"
+                    className="bg-gradient-to-br from-blue-500 to-blue-600 p-2.5 rounded-lg text-white flex items-center justify-center"
                 >
-                    <FaLinkedin size={18} />
+                    <FaLinkedin size={20} />
                 </motion.a>
                 <motion.a
                     initial={{ opacity: 0, scale: 0 }}
@@ -213,9 +213,9 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.85 }}
-                    className="bg-gradient-to-br from-gray-700 to-gray-900 p-2 rounded-lg text-white"
+                    className="bg-gradient-to-br from-gray-700 to-gray-900 p-2.5 rounded-lg text-white flex items-center justify-center"
                 >
-                    <FaGithub size={18} />
+                    <FaGithub size={20} />
                 </motion.a>
             </div>
         </motion.nav>
