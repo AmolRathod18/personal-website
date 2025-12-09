@@ -7,36 +7,20 @@ import { FaAward, FaExternalLinkAlt } from "react-icons/fa";
 const Certifications = () => {
     const certifications = [
         {
-            title: "AWS Certified Cloud Practitioner",
-            issuer: "Amazon Web Services",
-            date: "2024",
-            image: "/images/aws-cert.png",
-            link: "#",
-            skills: ["Cloud Computing", "AWS Services", "Infrastructure"]
-        },
-        {
-            title: "Full Stack Web Development",
+            title: "CompTIA Security+ (SY0-701)",
             issuer: "Udemy",
-            date: "2023",
-            image: "/images/fullstack-cert.png",
-            link: "#",
-            skills: ["MERN Stack", "REST APIs", "Database Design"]
-        },
-        {
-            title: "Python Programming",
-            issuer: "Coursera",
-            date: "2023",
-            image: "/images/python-cert.png",
-            link: "#",
-            skills: ["Python", "Flask", "Data Structures"]
-        },
-        {
-            title: "Cybersecurity Fundamentals",
-            issuer: "Cisco Networking Academy",
             date: "2024",
-            image: "/images/cyber-cert.png",
+            image: "/images/comptia-cert.png",
             link: "#",
-            skills: ["Network Security", "Threat Analysis", "Encryption"]
+            skills: ["Cybersecurity", "Risk Management", "Network Security"]
+        },
+        {
+            title: "Web Development",
+            issuer: "Internz Learn",
+            date: "2024",
+            image: "/images/webdev-cert.png",
+            link: "#",
+            skills: ["HTML", "CSS", "JavaScript", "Web Application Development"]
         }
     ];
 
