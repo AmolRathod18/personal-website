@@ -200,8 +200,6 @@ const Skills = () => {
                                                         {skill.name}
                                                     </span>
                                                 </div>
-                                                    </div>
-                                                </div>
                                             </motion.div>
                                         );
                                     })}
