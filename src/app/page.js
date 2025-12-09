@@ -185,16 +185,18 @@ export default function Home() {
             </div>
 
             <div className="w-full">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <Navbar />
-                </div>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <section id="home">
-                        <Hero />
-                    </section>
-                    <section id="about">
-                        <About />
-                    </section>
+                <div className="w-full bg-gradient-to-b from-black via-gray-950 to-black">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <Navbar />
+                    </div>
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <section id="home">
+                            <Hero />
+                        </section>
+                        <section id="about">
+                            <About />
+                        </section>
+                    </div>
                 </div>
             </div>
             
@@ -203,20 +205,22 @@ export default function Home() {
                 <EducationHero />
             </section>
             
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <section id="skills">
-                    <Skills />
-                </section>
-                <section id="experience">
-                    <Experience />
-                </section>
-                <section id="projects">
-                    <Projects />
-                </section>
-                <section id="contact">
-                    <Contact />
-                </section>
-                <Footer />
+            <div className="w-full bg-gradient-to-b from-black via-gray-950 to-black">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <section id="skills">
+                        <Skills />
+                    </section>
+                    <section id="experience">
+                        <Experience />
+                    </section>
+                    <section id="projects">
+                        <Projects />
+                    </section>
+                    <section id="contact">
+                        <Contact />
+                    </section>
+                    <Footer />
+                </div>
             </div>
             
             {/* Scroll to Top Button */}

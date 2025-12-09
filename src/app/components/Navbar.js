@@ -56,11 +56,11 @@ const Navbar = () => {
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                        className="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-sky-500/50"
+                        className="w-10 h-10 bg-gradient-to-br from-black via-gray-800 to-black border-2 border-white rounded-xl flex items-center justify-center shadow-lg"
                     >
                         <FaCode className="text-white text-xl" />
                     </motion.div>
-                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-sky-300 bg-clip-text text-transparent">Amol Rathod</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Amol Rathod</span>
                 </motion.div>
             </motion.div>
 
@@ -151,7 +151,7 @@ const Navbar = () => {
                         e.preventDefault();
                         handleScroll("#contact");
                     }}
-                    className="bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold px-6 py-2.5 rounded-lg hover:from-sky-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50"
+                    className="bg-gradient-to-r from-black via-gray-900 to-black text-white font-bold px-6 py-2.5 rounded-lg border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-lg"
                 >
                     Hire Me
                 </motion.a>
