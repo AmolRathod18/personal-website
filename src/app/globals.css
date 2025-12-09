@@ -18,6 +18,8 @@ html {
 body {
   overflow-x: hidden;
   overscroll-behavior-y: none;
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
+  min-height: 100vh;
 }
 
 :root {

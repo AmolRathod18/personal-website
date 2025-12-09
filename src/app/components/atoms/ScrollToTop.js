@@ -7,6 +7,7 @@ import { FaArrowUp } from "react-icons/fa";
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentSection, setCurrentSection] = useState("");
+    const [cursorY, setCursorY] = useState(0);
 
     useEffect(() => {
         const sections = [
@@ -14,7 +15,7 @@ const ScrollToTop = () => {
             { id: "about", element: null },
             { id: "education", element: null },
             { id: "skills", element: null },
-            { id: "experience", element: null },
+            { id: "certifications", element: null },
             { id: "projects", element: null },
             { id: "contact", element: null },
         ];
@@ -43,10 +44,18 @@ const ScrollToTop = () => {
             }
         };
 
+        const handleMouseMove = (e) => {
+            setCursorY(e.clientY);
+        };
+
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("mousemove", handleMouseMove);
         handleScroll(); // Initial check
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
     }, []);
 
     const scrollToTop = () => {
@@ -61,9 +70,19 @@ const ScrollToTop = () => {
             {isVisible && (
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    animate={{ 
+                        opacity: 1, 
+                        scale: 1,
+                        y: cursorY - 60
+                    }}
                     exit={{ opacity: 0, scale: 0.5 }}
-                    className="fixed bottom-8 right-8 z-50 flex flex-col items-center gap-2"
+                    transition={{ 
+                        y: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        scale: { duration: 0.3 }
+                    }}
+                    className="fixed right-8 z-50 flex flex-col items-center gap-2"
+                    style={{ top: 0 }}
                 >
                     {/* Current Section Indicator */}
                     <motion.div
