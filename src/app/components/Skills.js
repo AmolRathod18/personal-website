@@ -19,7 +19,8 @@ import {
     SiJavascript, 
     SiPhp, 
     SiMysql,
-    SiMongodb, 
+    SiMongodb,
+    SiPostgresql, 
     SiExpress, 
     SiFlask, 
     SiMaterialdesignicons, 
@@ -58,6 +59,8 @@ const Skills = () => {
             skills: [
                 { name: "MySQL", icon: SiMysql, color: "#4479A1" },
                 { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+                { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+                { name: "PHP", icon: SiPhp, color: "#777BB4" },
             ],
             gradient: "from-green-500 to-emerald-500",
         },
@@ -77,11 +80,14 @@ const Skills = () => {
             ],
             gradient: "from-orange-500 to-red-500",
         },
-    ];
-
-    const operatingSystems = [
-        { name: "Windows", icon: FaWindows, color: "#0078D6" },
-        { name: "Ubuntu", icon: FaUbuntu, color: "#E95420" }
+        {
+            title: "Operating Systems",
+            skills: [
+                { name: "Windows", icon: FaWindows, color: "#0078D6" },
+                { name: "Ubuntu", icon: FaUbuntu, color: "#E95420" },
+            ],
+            gradient: "from-cyan-500 to-blue-600",
+        },
     ];
 
     return (
@@ -126,7 +132,7 @@ const Skills = () => {
                 </motion.div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={category.title}
@@ -202,68 +208,6 @@ const Skills = () => {
                         </motion.div>
                     ))}
                 </div>
-
-                {/* Operating Systems - Special Section */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="relative group"
-                >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                    
-                    <div className="relative bg-gradient-to-br from-neutral-900/70 to-neutral-800/50 backdrop-blur-md rounded-2xl border border-cyan-500/30 p-8">
-                        <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text mb-8 text-center">
-                            Operating Systems
-                        </h3>
-                        <div className="flex justify-center gap-8">
-                            {operatingSystems.map((os, index) => {
-                                const IconComponent = os.icon;
-                                return (
-                                    <motion.div
-                                        key={index}
-                                        whileHover={{ scale: 1.2, y: -10 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="relative group/os"
-                                    >
-                                        {/* Neon Glow */}
-                                        <div 
-                                            className="absolute inset-0 rounded-2xl opacity-0 group-hover/os:opacity-100 blur-2xl transition-all duration-300"
-                                            style={{ 
-                                                boxShadow: `0 0 30px ${os.color}80, 0 0 60px ${os.color}40` 
-                                            }}
-                                        ></div>
-                                        
-                                        {/* OS Icon Container */}
-                                        <div 
-                                            className="relative flex items-center justify-center w-28 h-28 rounded-2xl bg-gradient-to-br from-neutral-800/90 to-neutral-900/90 border-2 border-neutral-700 group-hover/os:border-opacity-0 backdrop-blur-md transition-all duration-300 overflow-hidden"
-                                            style={{
-                                                boxShadow: `inset 0 0 30px ${os.color}30`
-                                            }}
-                                        >
-                                            {/* Glossy Effect */}
-                                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/os:opacity-100 transition-opacity duration-300"></div>
-                                            
-                                            {/* Icon */}
-                                            <IconComponent 
-                                                className="text-6xl relative z-10 transition-transform duration-300 group-hover/os:scale-110" 
-                                                style={{ color: os.color }}
-                                            />
-                                            
-                                            {/* Label */}
-                                            <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/os:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                                                <span className="text-sm font-bold text-white bg-neutral-900/90 px-3 py-1.5 rounded-lg border border-cyan-500/30">
-                                                    {os.name}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </motion.div>
             </div>
         </div>
     );
