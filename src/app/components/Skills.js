@@ -75,10 +75,12 @@ const Skills = () => {
             gradient: "from-green-500 to-emerald-500",
         },
         {
-            title: "Cloud & Networking",
+            title: "Cloud, Networking & Security",
             skills: [
                 { name: "AWS", icon: FaAws, color: "#FF9900" },
                 { name: "Computer Networks", icon: FaNetworkWired, color: "#0078D7" },
+                { name: "Cybersecurity", icon: FaShieldAlt, color: "#00D9FF" },
+                { name: "Kali Linux", icon: SiKalilinux, color: "#557C94" },
             ],
             gradient: "from-sky-500 to-blue-500",
         },
@@ -89,14 +91,6 @@ const Skills = () => {
                 { name: "Git", icon: FaGitAlt, color: "#F05032" },
             ],
             gradient: "from-orange-500 to-red-500",
-        },
-        {
-            title: "Cybersecurity & Security",
-            skills: [
-                { name: "Cybersecurity", icon: FaShieldAlt, color: "#00D9FF" },
-                { name: "Kali Linux", icon: SiKalilinux, color: "#557C94" },
-            ],
-            gradient: "from-red-500 to-pink-500",
         },
         {
             title: "Operating Systems",

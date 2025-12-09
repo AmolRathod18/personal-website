@@ -32,7 +32,7 @@ const Navbar = () => {
             initial={{ y: -150, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
-            className="flex items-center justify-between py-4 px-6 relative z-50"
+            className="flex items-center justify-between py-4 px-8 lg:px-12 xl:px-16 relative z-50 max-w-[1600px] mx-auto w-full"
         >
             {/* Navbar Background with Glassmorphism */}
             <motion.div

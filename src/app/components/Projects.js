@@ -45,14 +45,14 @@ const Projects = () => {
                                     <motion.div
                                         whileHover={{ scale: 1.02 }}
                                         transition={{ duration: 0.4 }}
-                                        className={`w-full lg:w-1/2 relative overflow-hidden min-h-[400px] lg:min-h-[500px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}
+                                        className={`w-full lg:w-1/2 p-6 flex items-center justify-center ${index % 2 === 1 ? 'lg:order-2' : ''}`}
                                     >
                                         {p.image === "null" ? (
                                             <div className="p-8 flex items-center justify-center h-full">
                                                 <LinkedInEmbedModal />
                                             </div>
                                         ) : (
-                                            <div className="relative group/image h-full">
+                                            <div className="relative group/image w-full rounded-2xl overflow-hidden shadow-2xl">
                                                 {/* Gradient Overlay */}
                                                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent opacity-60 z-10 group-hover:opacity-40 transition-opacity duration-500"></div>
                                                 
@@ -75,9 +75,9 @@ const Projects = () => {
                                                 <Image
                                                     src={p.image}
                                                     alt={p.title}
-                                                    fill
-                                                    className="object-cover group-hover/image:scale-105 transition-transform duration-500"
-                                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                                    width={600}
+                                                    height={400}
+                                                    className="w-full h-auto object-cover group-hover/image:scale-105 transition-transform duration-500"
                                                 />
                                                 
                                                 {/* Number Badge */}
@@ -85,7 +85,7 @@ const Projects = () => {
                                                     initial={{ scale: 0 }}
                                                     whileInView={{ scale: 1 }}
                                                     transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                                                    className="absolute top-8 right-8 z-20 bg-gradient-to-br from-sky-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg"
+                                                    className="absolute top-6 right-6 z-20 bg-gradient-to-br from-sky-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg"
                                                 >
                                                     {index + 1}
                                                 </motion.div>
