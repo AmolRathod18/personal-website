@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
                 <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
             </head>
             <body
-                className={`${inter.variable} antialiased`}
+                className={`${inter.variable} antialiased bg-transparent`}
             >
                 {children}
             </body>

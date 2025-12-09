@@ -35,10 +35,10 @@ const ScrollToTop = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.1, backgroundColor: "rgba(14, 165, 233, 0.2)" }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-sky-500 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-sky-500/50 transition-shadow duration-300"
+                    className="fixed bottom-8 right-8 z-50 bg-transparent backdrop-blur-md border-2 border-sky-500 text-sky-400 p-4 rounded-full shadow-lg hover:shadow-sky-500/50 transition-all duration-300"
                     aria-label="Scroll to top"
                 >
                     <FaArrowUp className="w-5 h-5" />

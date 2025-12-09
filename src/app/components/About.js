@@ -19,7 +19,7 @@ export const About = () => {
                     transition={{ duration: 0.5 }}
                     className="mb-20 text-center"
                 >
-                    <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent mb-4">
+                    <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent mb-4 text-center">
                         About <span className="text-sky-400">Me</span>
                     </h2>
                     <div className="h-1 w-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full mx-auto"></div>

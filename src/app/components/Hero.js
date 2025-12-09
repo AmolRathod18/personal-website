@@ -153,16 +153,16 @@ export const Hero = () => {
                                 />
                             </motion.div>
                             
-                            {/* Professional badge */}
+                            {/* Professional badge - Below photo */}
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 1.5 }}
                                 className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-20"
                             >
-                                <div className="bg-gradient-to-r from-sky-500/90 to-blue-600/90 backdrop-blur-sm text-white px-8 py-3 rounded-2xl text-sm font-bold shadow-2xl shadow-sky-500/50 border border-sky-400/30">
+                                <div className="bg-gradient-to-r from-black via-gray-900 to-black backdrop-blur-sm text-white px-8 py-3 rounded-2xl text-sm font-bold shadow-2xl border border-white/30">
                                     <span className="text-xs uppercase tracking-wider">Full Stack Developer</span>
-                                    <div className="text-[10px] text-sky-100 mt-0.5">MERN | Flask | Cloud</div>
+                                    <div className="text-[10px] text-gray-300 mt-0.5">MERN | Flask | Cloud</div>
                                 </div>
                             </motion.div>
                         </div>

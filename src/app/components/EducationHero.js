@@ -140,12 +140,12 @@ const EducationHero = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-3">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-center">
                         <span className="bg-gradient-to-r from-[#61dafb] via-[#bb86fc] to-[#00eaff] bg-clip-text text-transparent">
                             Education
                         </span>
                     </h2>
-                    <p className="text-gray-400 text-base sm:text-lg">
+                    <p className="text-gray-400 text-base sm:text-lg text-center">
                         Academic journey and qualifications
                     </p>
                 </motion.div>
