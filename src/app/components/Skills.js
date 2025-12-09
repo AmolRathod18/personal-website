@@ -24,8 +24,14 @@ import {
     SiExpress, 
     SiFlask, 
     SiMaterialdesignicons, 
-    SiDart
+    SiDart,
+    SiHtml5,
+    SiCss3,
+    SiTailwindcss,
+    SiVite,
+    SiKalilinux
 } from "react-icons/si";
+import { FaShieldAlt } from "react-icons/fa";
 
 const Skills = () => {
     const skillCategories = [
@@ -35,6 +41,8 @@ const Skills = () => {
                 { name: "Java", icon: FaJava, color: "#007396" },
                 { name: "Python", icon: FaPython, color: "#3776AB" },
                 { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+                { name: "HTML", icon: SiHtml5, color: "#E34F26" },
+                { name: "CSS", icon: SiCss3, color: "#1572B6" },
                 { name: "C", icon: FaCode, color: "#A8B9CC" },
                 { name: "PHP", icon: SiPhp, color: "#777BB4" },
                 { name: "SQL", icon: FaDatabase, color: "#4479A1" },
@@ -50,7 +58,9 @@ const Skills = () => {
                 { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
                 { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
                 { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
+                { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
                 { name: "Material UI", icon: SiMaterialdesignicons, color: "#0081CB" },
+                { name: "Vite", icon: SiVite, color: "#646CFF" },
             ],
             gradient: "from-blue-500 to-cyan-500",
         },
@@ -79,6 +89,14 @@ const Skills = () => {
                 { name: "Git", icon: FaGitAlt, color: "#F05032" },
             ],
             gradient: "from-orange-500 to-red-500",
+        },
+        {
+            title: "Cybersecurity & Security",
+            skills: [
+                { name: "Cybersecurity", icon: FaShieldAlt, color: "#00D9FF" },
+                { name: "Kali Linux", icon: SiKalilinux, color: "#557C94" },
+            ],
+            gradient: "from-red-500 to-pink-500",
         },
         {
             title: "Operating Systems",

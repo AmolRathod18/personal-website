@@ -45,14 +45,14 @@ const Projects = () => {
                                     <motion.div
                                         whileHover={{ scale: 1.02 }}
                                         transition={{ duration: 0.4 }}
-                                        className={`w-full lg:w-1/2 relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}
+                                        className={`w-full lg:w-1/2 relative overflow-hidden min-h-[400px] lg:min-h-[500px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}
                                     >
                                         {p.image === "null" ? (
-                                            <div className="p-8 flex items-center justify-center min-h-[400px]">
+                                            <div className="p-8 flex items-center justify-center h-full">
                                                 <LinkedInEmbedModal />
                                             </div>
                                         ) : (
-                                            <div className="relative group/image">
+                                            <div className="relative group/image h-full">
                                                 {/* Gradient Overlay */}
                                                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent opacity-60 z-10 group-hover:opacity-40 transition-opacity duration-500"></div>
                                                 
@@ -60,27 +60,25 @@ const Projects = () => {
                                                     <motion.div
                                                         whileHover={{ y: -5 }}
                                                         transition={{ duration: 0.3 }}
-                                                        className="p-4"
+                                                        className="absolute top-4 left-4 z-20"
                                                     >
                                                         <Image
                                                             src={p.image2}
                                                             alt={p.title}
-                                                            className="w-full rounded-2xl shadow-lg"
-                                                            width={400}
-                                                            height={300}
+                                                            className="w-32 lg:w-40 rounded-2xl shadow-lg"
+                                                            width={160}
+                                                            height={120}
                                                         />
                                                     </motion.div>
                                                 )}
                                                 
-                                                <div className="p-6">
-                                                    <Image
-                                                        src={p.image}
-                                                        alt={p.title}
-                                                        className="w-full rounded-2xl shadow-2xl group-hover/image:shadow-sky-500/30 transition-shadow duration-500"
-                                                        width={600}
-                                                        height={450}
-                                                    />
-                                                </div>
+                                                <Image
+                                                    src={p.image}
+                                                    alt={p.title}
+                                                    fill
+                                                    className="object-cover group-hover/image:scale-105 transition-transform duration-500"
+                                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                                />
                                                 
                                                 {/* Number Badge */}
                                                 <motion.div
