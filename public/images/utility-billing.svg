@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8eef7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="url(#bgGradient2)"/>
+  
+  <!-- Main card background -->
+  <rect x="60" y="120" width="1080" height="420" rx="24" fill="#2d3748" filter="drop-shadow(0 8px 24px rgba(0,0,0,0.12))"/>
+  
+  <!-- Top security badge -->
+  <g transform="translate(1040, 150)">
+    <circle cx="0" cy="0" r="32" fill="#4a5568" stroke="#0ea5e9" stroke-width="2"/>
+    <path d="M -8 -8 L 8 -8 L 8 4 Q 0 10 -8 4 Z" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+    <text x="0" y="20" font-size="12" text-anchor="middle" fill="#0ea5e9" font-family="Arial, sans-serif" font-weight="bold">Secure</text>
+    <text x="0" y="32" font-size="12" text-anchor="middle" fill="#0ea5e9" font-family="Arial, sans-serif" font-weight="bold">Payment</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="100" y="190" font-size="36" font-weight="bold" fill="#ffffff" font-family="Arial, sans-serif">
+    UTILITY BILLING HUB
+  </text>
+  
+  <!-- Left section - Monthly Consumption Chart -->
+  <g>
+    <!-- Section title -->
+    <text x="100" y="260" font-size="20" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="600">
+      Monthly Consumption
+    </text>
+    
+    <!-- Chart background -->
+    <rect x="100" y="290" width="400" height="200" rx="12" fill="#1a202c" opacity="0.6"/>
+    
+    <!-- Grid lines -->
+    <line x1="100" y1="350" x2="500" y2="350" stroke="#475569" stroke-width="1" opacity="0.3"/>
+    <line x1="100" y1="370" x2="500" y2="370" stroke="#475569" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Chart line and points -->
+    <polyline points="120,380 170,350 220,330 270,310 320,280 370,260 420,240" 
+              fill="none" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Data points -->
+    <circle cx="120" cy="380" r="5" fill="#0ea5e9"/>
+    <circle cx="170" cy="350" r="5" fill="#0ea5e9"/>
+    <circle cx="220" cy="330" r="5" fill="#0ea5e9"/>
+    <circle cx="270" cy="310" r="5" fill="#0ea5e9"/>
+    <circle cx="320" cy="280" r="5" fill="#0ea5e9"/>
+    <circle cx="370" cy="260" r="5" fill="#0ea5e9"/>
+    <circle cx="420" cy="240" r="5" fill="#0ea5e9"/>
+    
+    <!-- X-axis labels -->
+    <text x="125" y="410" font-size="12" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif">JAN</text>
+    <text x="175" y="410" font-size="12" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif">FEB</text>
+    <text x="225" y="410" font-size="12" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif">FEB</text>
+    <text x="275" y="410" font-size="12" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif">MAR</text>
+    <text x="325" y="410" font-size="12" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif">MAR</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="560" y1="240" x2="560" y2="480" stroke="#475569" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Right section - Outstanding Bills -->
+  <g>
+    <!-- Section title -->
+    <text x="620" y="260" font-size="20" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="600">
+      Outstanding Bills
+    </text>
+    
+    <!-- Bill item 1 - Electricity -->
+    <g>
+      <!-- Checkmark icon -->
+      <circle cx="650" cy="310" r="18" fill="none" stroke="#22c55e" stroke-width="2"/>
+      <path d="M 640 310 L 648 318 L 660 302" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Bill text -->
+      <text x="690" y="320" font-size="18" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="600">
+        Electricity
+      </text>
+      
+      <!-- Pay button -->
+      <rect x="900" y="297" width="100" height="36" rx="6" fill="#22c55e"/>
+      <text x="950" y="322" font-size="14" fill="#ffffff" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">
+        PAY NOW
+      </text>
+    </g>
+    
+    <!-- Bill item 2 - Gas -->
+    <g>
+      <text x="690" y="375" font-size="18" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="600">
+        Gas
+      </text>
+      <text x="900" y="375" font-size="18" fill="#94a3b8" text-anchor="end" font-family="Arial, sans-serif" font-weight="600">
+        $15.00
+      </text>
+    </g>
+    
+    <!-- Bill item 3 - Water -->
+    <g>
+      <text x="690" y="430" font-size="18" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="600">
+        Water
+      </text>
+      <text x="900" y="430" font-size="18" fill="#94a3b8" text-anchor="end" font-family="Arial, sans-serif" font-weight="600">
+        $15.00
+      </text>
+    </g>
+  </g>
+  
+  <!-- Decorative element -->
+  <circle cx="1100" cy="600" r="60" fill="#0ea5e9" opacity="0.05"/>
+</svg>
