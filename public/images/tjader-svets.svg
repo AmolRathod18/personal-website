@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" fill="none">
+  <defs>
+    <linearGradient id="background" x1="96" y1="40" x2="1140" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202A2D"/>
+      <stop offset="1" stop-color="#0B1114"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="834" y1="294" x2="1022" y2="546" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCC66"/>
+      <stop offset="1" stop-color="#F17832"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" rx="40" fill="url(#background)"/>
+  <circle cx="930" cy="410" r="232" fill="#F18B3C" fill-opacity=".08"/>
+  <path d="M892 307 962 374 894 440 827 374 892 307Z" fill="url(#glow)"/>
+  <path d="m895 342 30 32-31 31-31-31 32-32Z" fill="#FFF0C2"/>
+  <path d="m806 294 17 23-25 3 8-26Zm178 70 28 7-19 17-9-24Zm-184 105 24-14-2 29-22-15Zm191 35 8-28 17 23-25 5Zm-87-204 6-27 18 21-24 6Z" fill="#FFCC66"/>
+  <path d="M766 519h336" stroke="#58666A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M802 557h267" stroke="#39464A" stroke-width="4" stroke-linecap="round"/>
+  <text x="96" y="284" fill="#E9F0EF" font-family="Arial, sans-serif" font-size="72" font-weight="700">Tjädertuppen</text>
+  <text x="102" y="356" fill="#D9A35E" font-family="Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="5">SVETS &amp; KONSULT</text>
+  <text x="102" y="426" fill="#A9B5B5" font-family="Arial, sans-serif" font-size="25">Welding &amp; Industrial Services</text>
+  <path d="M102 478h87" stroke="#D9A35E" stroke-width="6" stroke-linecap="round"/>
+</svg>

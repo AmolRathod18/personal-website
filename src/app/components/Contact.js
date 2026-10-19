@@ -43,7 +43,7 @@ const Contact = ({ onToast }) => {
                 Let’s <span className="text-sky-400">work</span>
             </h2>
             <p className="mx-auto mb-12 max-w-xl text-center text-neutral-400">
-                Open to full-stack roles, internships, and freelance. Write here or press Ctrl+K and search “email”.
+                For professional inquiries, collaborations, or freelance opportunities, write here or press Ctrl+K and search “email”.
             </p>
 
             <div className="grid gap-6 md:grid-cols-3">

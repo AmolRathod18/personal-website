@@ -25,22 +25,30 @@ export const ABOUT_HIGHLIGHTS = [
 ];
 
 export const STATUS = {
-    availability: "Open to full-stack roles & freelance",
+    availability: "IT Executive at Meru Info Solutions (deployed at BDA)",
     location: "Bengaluru, India",
     building: "Hardening NIDPS honeypot telemetry + polishing EnLab",
 };
 
 export const NOW_ITEMS = [
+    "Working as an IT Executive at Meru Info Solutions, deployed at Bangalore Development Authority",
     "Building secure MERN products with JWT, RBAC, and payments",
     "Exploring cloud + cybersecurity: AWS, networks, CompTIA Security+",
-    "Open to internships, junior full-stack roles, and serious freelance work",
 ];
 
 export const EXPERIENCES = [
     {
-        year: "2024 – Present",
-        role: "Full Stack Developer",
-        company: "Independent / Personal Products",
+        year: "May 1, 2026 – Present",
+        role: "IT Executive",
+        company: "Meru Info Solutions (deployed at Bangalore Development Authority)",
+        description:
+            "Responsible for IT operations, data verification, documentation, technical troubleshooting, and administrative support, ensuring accurate records and smooth day-to-day operations.",
+        technologies: [],
+    },
+    {
+        year: "Jun 2025 – Nov 2025",
+        role: "Full Stack Developer Intern",
+        company: "Agamya Cyber Tech, Dharwad",
         description:
             "Building production-style web apps with React, Node.js, Express, and Python Flask. Implemented secure authentication, role-based access, payment integrations, and cloud deployments. Worked with MySQL and MongoDB, and shipped services to Render and Vercel.",
         technologies: ["React", "Node.js", "Flask", "MongoDB", "MySQL"],
@@ -48,6 +56,17 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+    {
+        title: "Tjädertuppen Svets & Konsult Website",
+        image: "/images/tjader-svets.svg",
+        description:
+            "Developed the website for Tjädertuppen Svets & Konsult, a welding and industrial services company in Sweden. My contribution to this project was website development.",
+        technologies: [],
+        link: "https://www.tjadersvets.com/",
+        linkLabel: "Visit live website",
+        category: "Web Development",
+        highlight: "Website development",
+    },
     {
         title: "Network Prevention & Detection with Honeypot",
         image: "/images/NIDPS.png",

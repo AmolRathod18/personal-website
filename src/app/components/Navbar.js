@@ -46,7 +46,7 @@ const Navbar = () => {
         <motion.nav
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            className="relative sticky top-3 z-50 mt-3 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur-xl sm:px-6"
+            className="relative mt-3 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur-xl sm:px-6"
         >
             <button
                 type="button"

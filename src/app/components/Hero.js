@@ -2,7 +2,7 @@
 
 import { HERO_CONTENT, HERO_STRINGS, NOW_ITEMS, STATUS } from "../constants";
 import { motion } from "motion/react";
-import profilePic from "../../../public/images/Profile.jpg";
+import profilePic from "../../../public/images/Profile.png";
 import Image from "next/image";
 import TypewriterComponent from "typewriter-effect";
 import { useEffect, useState } from "react";

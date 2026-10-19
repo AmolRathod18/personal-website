@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-const FILTERS = ["All", "Full Stack", "Cybersecurity", "Python"];
+const FILTERS = ["All", "Web Development", "Full Stack", "Cybersecurity", "Python"];
 
 const Projects = () => {
     const [filter, setFilter] = useState("All");
@@ -80,9 +80,11 @@ const Projects = () => {
                                         height={400}
                                         className="h-auto w-full object-cover"
                                     />
-                                    <span className="absolute right-4 top-4 rounded-full bg-sky-600 px-3 py-1 text-xs font-semibold text-white">
-                                        {p.year}
-                                    </span>
+                                    {p.year && (
+                                        <span className="absolute right-4 top-4 rounded-full bg-sky-600 px-3 py-1 text-xs font-semibold text-white">
+                                            {p.year}
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                             <div className={`flex w-full flex-col justify-center p-8 lg:w-1/2 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
@@ -130,7 +132,7 @@ const Projects = () => {
                                     rel="noopener noreferrer"
                                     className="mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400"
                                 >
-                                    View on GitHub →
+                                    {p.linkLabel || "View on GitHub"} →
                                 </a>
                             </div>
                         </div>

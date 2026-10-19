@@ -26,7 +26,7 @@ export default function Home() {
     };
 
     return (
-        <div className="relative overflow-x-hidden text-neutral-300 antialiased selection:bg-sky-300 selection:text-black">
+        <div className="relative overflow-x-clip text-neutral-300 antialiased selection:bg-sky-300 selection:text-black">
             <div className="pointer-events-none fixed inset-0 -z-10 bg-[#05070c]">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(14,165,233,0.12),_transparent_55%)]" />
                 <div className="site-grain absolute inset-0 opacity-40" />
@@ -36,7 +36,7 @@ export default function Home() {
             <CommandPalette onToast={showToast} />
             <Toast message={toast} />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="sticky top-3 z-50 container mx-auto px-4 sm:px-6 lg:px-8">
                 <Navbar />
             </div>
 
