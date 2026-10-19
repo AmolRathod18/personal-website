@@ -187,8 +187,8 @@ const DevTerminal = () => {
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.28em] text-sky-400">
                     Unique feature
                 </p>
-                <h2 className="text-4xl font-bold text-white sm:text-5xl">Talk to the portfolio</h2>
-                <p className="mx-auto mt-3 max-w-2xl text-neutral-400">
+                <h2 className="section-title text-white">Talk to the portfolio</h2>
+                <p className="section-description mt-3 text-center">
                     A live command line. Recruiters can type <span className="text-sky-300">projects</span>,{" "}
                     <span className="text-sky-300">hire</span>, or <span className="text-sky-300">cv</span> instead of
                     hunting through sections. Tab completes. Arrow keys recall history.

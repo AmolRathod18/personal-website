@@ -33,12 +33,6 @@ export default {
       },
       fontFamily: {
         sans: ['var(--font-sans)'],
-        intertight: ['var(--font-intertight)'],
-        literata: ['var(--font-literata)'],
-        firacode: ['var(--font-firacode)'],
-        ibmplexmono: ['var(--font-ibmplexmono)'],
-        fraunces: ['var(--font-fraunces)'],
-        poppins: ['var(--font-poppins)'],
       },
       fontSize: {
         xxs: 'var(--font-size-xxs)',

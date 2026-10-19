@@ -44,7 +44,7 @@ export const Hero = () => {
                         variants={container(0.15)}
                         initial="hidden"
                         animate="visible"
-                        className="text-4xl font-extrabold leading-tight text-white sm:text-6xl lg:text-7xl"
+                        className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
                     >
                         Amol Rathod
                     </motion.h1>

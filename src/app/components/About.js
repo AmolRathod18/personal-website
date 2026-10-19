@@ -20,7 +20,7 @@ export const About = () => {
                 viewport={{ once: true }}
                 className="mb-14 text-center"
             >
-                <h2 className="text-4xl font-bold text-white lg:text-5xl">
+                <h2 className="section-title text-white">
                     About <span className="text-sky-400">me</span>
                 </h2>
                 <div className="mx-auto mt-3 h-1 w-14 rounded-full bg-sky-500" />
@@ -46,7 +46,7 @@ export const About = () => {
                     viewport={{ once: true }}
                     className="space-y-6"
                 >
-                    <p className="text-lg leading-relaxed text-neutral-300">{ABOUT_ME}</p>
+                    <p className="text-base leading-relaxed text-neutral-300">{ABOUT_ME}</p>
 
                     <div className="grid gap-3 sm:grid-cols-3">
                         {ABOUT_HIGHLIGHTS.map((item) => (

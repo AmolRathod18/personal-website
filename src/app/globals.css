@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,13 +10,6 @@ html {
 
 * {
   -webkit-tap-highlight-color: transparent;
-}
-
-body {
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  background: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
-  min-height: 100vh;
 }
 
 :root {
@@ -142,12 +133,7 @@ body {
   
   /* Font Families */
   --font-sans: var(--font-inter), 'Inter', sans-serif;
-  --font-intertight: 'Inter Tight', sans-serif;
-  --font-literata: 'Literata', serif;
-  --font-firacode: 'Fira Code', monospace;
-  --font-ibmplexmono: 'IBM Plex Mono', monospace;
-  --font-fraunces: 'Fraunces', serif;
-  --font-poppins: 'Poppins', sans-serif;
+  --font-code: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
   
   /* Font Sizes */
   --font-size-xxs: 0.625rem;    /* 10px */
@@ -193,13 +179,34 @@ body {
 }
 
 body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
   color: white;
-  background: black;
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .section-title {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+
+  .section-description {
+    max-width: 42rem;
+    margin-inline: auto;
+    color: var(--grey-400);
+    font-size: var(--font-size-base);
+    line-height: 1.65;
+  }
 }
 
 .site-grain {
@@ -210,11 +217,6 @@ body {
 }
 
 kbd {
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-code);
 }
-
-.text-center p {
-  text-align: center;
-}
-
 

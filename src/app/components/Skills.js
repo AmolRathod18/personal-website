@@ -124,7 +124,7 @@ const Skills = () => {
                     className="mb-20 text-center"
                 >
                     <motion.h2
-                        className="text-5xl lg:text-6xl font-bold mb-4 relative inline-block"
+                        className="section-title relative mb-4 inline-block"
                         animate={{
                             textShadow: [
                                 "0 0 20px rgba(56, 189, 248, 0.5)",
@@ -139,7 +139,7 @@ const Skills = () => {
                         </span>
                     </motion.h2>
                     <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full mx-auto mt-4"></div>
-                    <p className="text-neutral-400 mt-6 text-lg">Languages, frameworks, data, cloud, and tools I ship with</p>
+                    <p className="section-description mt-6 text-center">Languages, frameworks, data, cloud, and tools I ship with</p>
                 </motion.div>
 
                 {/* Skills Grid */}

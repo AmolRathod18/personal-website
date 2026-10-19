@@ -10,7 +10,7 @@ const Experience = () => {
                 initial={{ opacity: 1 }}
                 className="mb-20 text-center"
             >
-                <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent mb-4 text-center">
+                <h2 className="section-title mb-4 bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-center text-transparent">
                     Work <span className="text-sky-400">Experience</span>
                 </h2>
                 <div className="h-1 w-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full mx-auto"></div>
@@ -36,13 +36,13 @@ const Experience = () => {
                                         </div>
                                     </motion.div>
                                     <div className="lg:w-3/4">
-                                        <h6 className="mb-2 text-xl font-bold text-white">
+                                        <h3 className="mb-2 text-xl font-bold leading-snug text-white">
                                             {e.role}
-                                        </h6>
-                                        <p className="text-sky-300 font-medium mb-4">
+                                        </h3>
+                                        <p className="mb-4 text-sm font-medium text-sky-300">
                                             {e.company}
                                         </p>
-                                        <p className="mb-6 text-neutral-300 leading-relaxed">
+                                        <p className="mb-6 text-base leading-relaxed text-neutral-300">
                                             {e.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2">

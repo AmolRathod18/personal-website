@@ -27,10 +27,10 @@ const Projects = () => {
     return (
         <div className="relative pb-20 pt-10">
             <div className="mb-10 text-center">
-                <h2 className="text-4xl font-bold text-white lg:text-5xl">
+                <h2 className="section-title text-white">
                     Featured <span className="text-sky-400">projects</span>
                 </h2>
-                <p className="mx-auto mt-3 max-w-2xl text-neutral-400">
+                <p className="section-description mt-3 text-center">
                     Filter by domain or search a technology. Each card is a real build, not a template demo.
                 </p>
             </div>

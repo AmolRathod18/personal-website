@@ -47,7 +47,7 @@ const EducationCard = ({
             </div>
 
             <div className="p-5 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight group-hover:text-[#61dafb] transition-colors duration-300">
+                <h3 className="mb-2 text-xl font-bold leading-snug text-white transition-colors duration-300 group-hover:text-[#61dafb] sm:text-2xl">
                     {degree}
                 </h3>
 
@@ -140,12 +140,12 @@ const EducationHero = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-center">
+                    <h2 className="section-title mb-3 text-center">
                         <span className="bg-gradient-to-r from-[#61dafb] via-[#bb86fc] to-[#00eaff] bg-clip-text text-transparent">
                             Education
                         </span>
                     </h2>
-                    <p className="text-gray-400 text-base sm:text-lg text-center">
+                    <p className="section-description text-center">
                         Academic journey and qualifications
                     </p>
                 </motion.div>

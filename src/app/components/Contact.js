@@ -39,10 +39,10 @@ const Contact = ({ onToast }) => {
 
     return (
         <div className="pb-20 pt-10">
-            <h2 className="mb-4 text-center text-4xl font-bold text-white">
+            <h2 className="section-title mb-4 text-center text-white">
                 Let’s <span className="text-sky-400">work</span>
             </h2>
-            <p className="mx-auto mb-12 max-w-xl text-center text-neutral-400">
+            <p className="section-description mb-12 text-center">
                 For professional inquiries, collaborations, or freelance opportunities, write here or press Ctrl+K and search “email”.
             </p>
 
