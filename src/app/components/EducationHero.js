@@ -3,82 +3,74 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 
-const EducationCard = ({ 
-    image, 
-    badge, 
-    degree, 
-    college, 
-    location, 
-    duration, 
-    score, 
-    scoreLabel, 
+const EducationCard = ({
+    image,
+    level,
+    degree,
+    college,
+    location,
+    duration,
+    score,
+    scoreLabel,
     link,
-    index 
+    index,
 }) => {
     return (
-        <motion.div
+        <motion.article
             initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.4 }}
-            className="group relative w-full rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-[#61dafb]/50 hover:shadow-xl hover:shadow-[#61dafb]/20"
+            transition={{ delay: index * 0.06, duration: 0.35 }}
+            className="education-card group relative flex h-full flex-col overflow-hidden rounded-2xl border transition duration-200"
         >
-            <div className="relative w-full h-48 sm:h-56 overflow-hidden">
+            <div className="education-card-photo relative h-36 w-full overflow-hidden sm:h-40">
                 <Image
                     src={image}
-                    alt={college}
+                    alt={`${college} campus`}
                     fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/30"></div>
-                
-                <div className="absolute top-3 left-3">
-                    <span className="px-3 py-1.5 bg-sky-500 rounded-lg text-white text-xs font-bold shadow-lg">
-                        {badge}
-                    </span>
-                </div>
-                
-                <div className="absolute bottom-3 right-3">
-                    <span className="px-3 py-1.5 bg-black/70 backdrop-blur-sm rounded-lg text-white text-xs font-medium border border-white/20">
-                        {duration}
-                    </span>
-                </div>
+                <div className="education-card-photo-shade absolute inset-0" />
+                <span className="education-card-level absolute bottom-3 left-4 font-mono text-[9px] uppercase tracking-[0.16em]">
+                    {level}
+                </span>
+                <span className="education-card-date absolute right-3 top-3 rounded-full border px-3 py-1.5 font-mono text-[10px]">
+                    {duration}
+                </span>
             </div>
 
-            <div className="p-5 sm:p-6">
-                <h3 className="mb-2 text-xl font-bold leading-snug text-white transition-colors duration-300 group-hover:text-[#61dafb] sm:text-2xl">
+            <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="education-card-title text-lg font-semibold leading-snug sm:text-xl">
                     {degree}
                 </h3>
 
-                <p className="text-sm sm:text-base font-semibold text-gray-300 mb-1">
+                <p className="education-card-school mt-2 text-sm font-medium">
                     {college}
                 </p>
-                <p className="text-xs text-[#61dafb]/80 mb-4 flex items-center gap-1">
-                    <span>📍</span>
-                    <span>{location}</span>
+                <p className="education-card-location mt-1 text-xs">
+                    {location}
                 </p>
 
-                <div className="flex items-center justify-between gap-3 pt-4 border-t border-gray-800">
-                    <div className="bg-gray-800/60 rounded-lg px-4 py-2.5 border border-gray-700">
-                        <p className="text-[10px] text-gray-400 uppercase tracking-wide mb-0.5">{scoreLabel}</p>
-                        <p className="text-lg sm:text-xl font-bold text-[#bb86fc]">{score}</p>
+                <div className="education-card-footer mt-auto flex items-end justify-between gap-3 border-t pt-4">
+                    <div>
+                        <p className="education-card-score-label font-mono text-[9px] uppercase tracking-[0.13em]">{scoreLabel}</p>
+                        <p className="education-card-score mt-1 text-lg font-semibold leading-tight">{score}</p>
                     </div>
 
-                    <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#61dafb] to-[#bb86fc] rounded-lg text-white font-semibold text-sm hover:shadow-lg hover:shadow-[#61dafb]/50 transition-all duration-300 hover:scale-105"
-                    >
-                        <span>View Details</span>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </a>
+                    {link !== "#" && (
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="education-card-link inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition"
+                        >
+                            Institution <span aria-hidden="true">↗</span>
+                        </a>
+                    )}
                 </div>
             </div>
-        </motion.div>
+        </motion.article>
     );
 };
 
@@ -86,7 +78,7 @@ const EducationHero = () => {
     const educationData = [
         {
             image: "/images/kle-tech-logo.jpg",
-            badge: "🎓",
+            level: "Postgraduate",
             degree: "Master of Computer Applications",
             college: "KLE Technological University",
             location: "Hubballi, Karnataka",
@@ -97,60 +89,37 @@ const EducationHero = () => {
         },
         {
             image: "/images/karnataka-university-logo.jpg",
-            badge: "📚",
+            level: "Undergraduate",
             degree: "Bachelor of Science (Computer Science)",
             college: "Karnataka Science College",
             location: "Dharwad, Karnataka",
             duration: "2020 – 2023",
-            score: "76.57%",
-            scoreLabel: "Percentage",
+            score: "7.9",
+            scoreLabel: "CGPA",
             link: "https://kscd.ac.in/department_BCA_BSC(CS)1.php"
-        },
-        {
-            image: "/images/sri-shanteshwar-logo.jpg",
-            badge: "🏫",
-            degree: "Pre-University Course",
-            college: "Sri Shanteshwar PU College",
-            location: "Indi – Vijayapura, Karnataka",
-            duration: "2020",
-            score: "65.33%",
-            scoreLabel: "Percentage",
-            link: "https://sspharmacycollege.in/"
-        },
-        {
-            image: "/images/govt-school-indi.jpg",
-            badge: "✏️",
-            degree: "Secondary School Leaving Certificate",
-            college: "Govt. High School Indi",
-            location: "Indi – Vijayapura, Karnataka",
-            duration: "2018",
-            score: "81.28%",
-            scoreLabel: "Percentage",
-            link: "#"
         }
     ];
 
     return (
-        <div className="w-full bg-gray-950 py-16 sm:py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="education-section w-full border-y py-12 sm:py-14">
+            <div className="mx-auto w-full max-w-[1760px] px-4 sm:px-6 lg:px-10 2xl:px-14">
                 <motion.div
                     initial={{ opacity: 1, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-12"
+                    className="mb-8 border-b border-neutral-300 pb-6 text-left"
                 >
-                    <h2 className="section-title mb-3 text-center">
-                        <span className="bg-gradient-to-r from-[#61dafb] via-[#bb86fc] to-[#00eaff] bg-clip-text text-transparent">
-                            Education
-                        </span>
+                    <p className="field-eyebrow mb-3">05 / Foundations</p>
+                    <h2 className="field-display text-4xl text-neutral-900 sm:text-6xl">
+                        Education
                     </h2>
-                    <p className="section-description text-center">
+                    <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 sm:text-base">
                         Academic journey and qualifications
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5">
                     {educationData.map((edu, index) => (
                         <EducationCard key={index} {...edu} index={index} />
                     ))}

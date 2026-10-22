@@ -31,7 +31,7 @@ export const STATUS = {
 };
 
 export const NOW_ITEMS = [
-    "Working as an IT Executive at Meru Info Solutions, deployed at Bangalore Development Authority",
+    "IT Executive at Meru Info Solutions, deployed by Meru at Bangalore Development Authority (BDA)",
     "Building secure MERN products with JWT, RBAC, and payments",
     "Exploring cloud + cybersecurity: AWS, networks, CompTIA Security+",
 ];
@@ -40,7 +40,14 @@ export const EXPERIENCES = [
     {
         year: "May 1, 2026 – Present",
         role: "IT Executive",
-        company: "Meru Info Solutions (deployed at Bangalore Development Authority)",
+        company: "Meru Info Solutions",
+        companyLogo: "/images/meru-info-solutions-logo.png",
+        companyLogoAlt: "Meru Info Solutions logo",
+        deployment: {
+            name: "Bangalore Development Authority (BDA)",
+            label: "Deployed by Meru Info Solutions at",
+            link: "https://share.google/I0g46hKBNLe3etj6W",
+        },
         description:
             "Responsible for IT operations, data verification, documentation, technical troubleshooting, and administrative support, ensuring accurate records and smooth day-to-day operations.",
         technologies: [],
@@ -48,7 +55,11 @@ export const EXPERIENCES = [
     {
         year: "Jun 2025 – Nov 2025",
         role: "Full Stack Developer Intern",
-        company: "Agamya Cyber Tech, Dharwad",
+        company: "Agamya Cyber Tech",
+        companyLink: "https://agamyacybertech.com/",
+        companyLogo: "/images/agamya-cyber-tech-logo.png",
+        companyLogoAlt: "Agamya Cyber Tech logo",
+        location: "Dharwad, Karnataka",
         description:
             "Building production-style web apps with React, Node.js, Express, and Python Flask. Implemented secure authentication, role-based access, payment integrations, and cloud deployments. Worked with MySQL and MongoDB, and shipped services to Render and Vercel.",
         technologies: ["React", "Node.js", "Flask", "MongoDB", "MySQL"],
@@ -58,7 +69,10 @@ export const EXPERIENCES = [
 export const PROJECTS = [
     {
         title: "Tjädertuppen Svets & Konsult Website",
-        image: "/images/tjader-svets.svg",
+        image: "/images/tjader-company-project.webp",
+        imageAlt: "Tjädertuppen branded service vehicle from the company's website",
+        companyLogo: "/images/tjader-official-logo.jpeg",
+        companyLogoAlt: "Official Tjädertuppen logo",
         description:
             "Developed the website for Tjädertuppen Svets & Konsult, a welding and industrial services company in Sweden. My contribution to this project was website development.",
         technologies: [],
@@ -101,15 +115,15 @@ export const PROJECTS = [
         highlight: "Flask + React billing workflow",
     },
     {
-        title: "Online PG Management System",
-        image: "/images/pg-management.svg",
+        title: "Reszolute Services Website",
+        image: "/images/reszolute-project.png",
         description:
-            "Booking and operations for PG accommodations — listings, bookings, and tenant communication with a responsive UI and secured admin/user backends.",
-        technologies: ["Python (Flask)", "MySQL", "HTML", "CSS", "Bootstrap"],
-        link: "https://github.com/AmolRathod18?tab=repositories",
-        category: "Python",
-        year: "2024",
-        highlight: "Bookings with role-based admin tools",
+            "A service website presenting Reszolute’s software testing, frontend development, UI/UX design, and staff augmentation offerings.",
+        technologies: [],
+        link: "https://institute-zeta.vercel.app/",
+        linkLabel: "Visit live website",
+        category: "Web Development",
+        highlight: "Software and digital services",
     },
     {
         title: "Laptop Rental Management System",

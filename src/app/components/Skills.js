@@ -12,18 +12,18 @@ import {
     FaUbuntu,
     FaNetworkWired,
     FaDatabase,
-    FaCode,
     FaJava
 } from "react-icons/fa";
 import { 
     SiJavascript, 
+    SiC,
     SiPhp, 
     SiMysql,
     SiMongodb,
     SiPostgresql, 
     SiExpress, 
     SiFlask, 
-    SiMaterialdesignicons, 
+    SiMui,
     SiDart,
     SiHtml5,
     SiCss3,
@@ -32,6 +32,7 @@ import {
     SiKalilinux
 } from "react-icons/si";
 import { FaShieldAlt } from "react-icons/fa";
+import { TbBrandVscode } from "react-icons/tb";
 
 const Skills = () => {
     const skillCategories = [
@@ -40,29 +41,29 @@ const Skills = () => {
             skills: [
                 { name: "Java", icon: FaJava, color: "#007396" },
                 { name: "Python", icon: FaPython, color: "#3776AB" },
-                { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+                { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", surface: "#323330" },
                 { name: "HTML", icon: SiHtml5, color: "#E34F26" },
                 { name: "CSS", icon: SiCss3, color: "#1572B6" },
-                { name: "C", icon: FaCode, color: "#A8B9CC" },
+                { name: "C", icon: SiC, color: "#3949AB" },
                 { name: "PHP", icon: SiPhp, color: "#777BB4" },
                 { name: "SQL", icon: FaDatabase, color: "#4479A1" },
                 { name: "Dart", icon: SiDart, color: "#0175C2" },
             ],
-            gradient: "from-purple-500 to-pink-500",
+            gradient: "from-orange-500 to-orange-300",
         },
         {
             title: "Frameworks & Libraries",
             skills: [
-                { name: "React.js", icon: FaReact, color: "#61DAFB" },
+                { name: "React.js", icon: FaReact, color: "#087E9B" },
                 { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-                { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
-                { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
+                { name: "Express.js", icon: SiExpress, color: "#111111" },
+                { name: "Flask", icon: SiFlask, color: "#111111" },
                 { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
-                { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-                { name: "Material UI", icon: SiMaterialdesignicons, color: "#0081CB" },
+                { name: "Tailwind CSS", icon: SiTailwindcss, color: "#0B839A" },
+                { name: "Material UI", icon: SiMui, color: "#007FFF" },
                 { name: "Vite", icon: SiVite, color: "#646CFF" },
             ],
-            gradient: "from-blue-500 to-cyan-500",
+            gradient: "from-orange-500 to-amber-500",
         },
         {
             title: "Databases",
@@ -78,15 +79,15 @@ const Skills = () => {
             skills: [
                 { name: "AWS", icon: FaAws, color: "#FF9900" },
                 { name: "Computer Networks", icon: FaNetworkWired, color: "#0078D7" },
-                { name: "Cybersecurity", icon: FaShieldAlt, color: "#00D9FF" },
+                { name: "Cybersecurity", icon: FaShieldAlt, color: "#087E9B" },
                 { name: "Kali Linux", icon: SiKalilinux, color: "#557C94" },
             ],
-            gradient: "from-sky-500 to-blue-500",
+            gradient: "from-orange-500 to-amber-500",
         },
         {
             title: "Developer Tools",
             skills: [
-                { name: "VS Code", icon: FaCode, color: "#007ACC" },
+                { name: "VS Code", icon: TbBrandVscode, color: "#007ACC" },
                 { name: "Git", icon: FaGitAlt, color: "#F05032" },
             ],
             gradient: "from-orange-500 to-red-500",
@@ -97,49 +98,32 @@ const Skills = () => {
                 { name: "Windows", icon: FaWindows, color: "#0078D6" },
                 { name: "Ubuntu", icon: FaUbuntu, color: "#E95420" },
             ],
-            gradient: "from-cyan-500 to-blue-600",
+            gradient: "from-amber-500 to-orange-600",
         },
     ];
 
     return (
         <div className="py-20 relative overflow-hidden">
-            {/* Futuristic Background Effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-blue-900/10 to-cyan-900/10 pointer-events-none"></div>
-            
-            {/* Neon Circuit Lines */}
-            <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent"></div>
-                <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"></div>
-                <div className="absolute left-0 top-1/3 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-                <div className="absolute left-0 bottom-1/3 w-full h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
-            </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4">
+            <div className="relative z-10 mx-auto w-full max-w-[1760px] px-4 sm:px-6 lg:px-10 2xl:px-14">
                 {/* Section Title */}
                 <motion.div
                     initial={{ opacity: 1, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="mb-20 text-center"
+                    className="mb-12 border-b border-white/10 pb-8 text-left"
                 >
+                    <p className="field-eyebrow mb-3">07 / Technical toolkit</p>
                     <motion.h2
-                        className="section-title relative mb-4 inline-block"
-                        animate={{
-                            textShadow: [
-                                "0 0 20px rgba(56, 189, 248, 0.5)",
-                                "0 0 40px rgba(167, 139, 250, 0.5)",
-                                "0 0 20px rgba(56, 189, 248, 0.5)",
-                            ],
-                        }}
-                        transition={{ duration: 3, repeat: Infinity }}
+                        className="field-display relative mb-3 text-4xl text-white sm:text-6xl"
                     >
-                        <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-white bg-clip-text text-transparent">
-                            Technical skills
+                        <span className="text-orange-200">
+                            Technologies I use
                         </span>
                     </motion.h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full mx-auto mt-4"></div>
-                    <p className="section-description mt-6 text-center">Languages, frameworks, data, cloud, and tools I ship with</p>
+                    <p className="max-w-2xl text-sm leading-relaxed text-neutral-400 sm:text-base">
+                        Languages, frameworks, databases, and platforms I have worked with across my projects and roles.
+                    </p>
                 </motion.div>
 
                 {/* Skills Grid */}
@@ -151,19 +135,17 @@ const Skills = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative"
+                            className="group relative self-start"
                         >
-                            {/* Holographic Card Background */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/80 to-neutral-800/50 rounded-2xl backdrop-blur-sm border border-neutral-700 group-hover:border-cyan-500/50 transition-all duration-300"></div>
-                            
-                            {/* Glowing Effect */}
+                            <div className="absolute inset-0 rounded-2xl border border-neutral-200 bg-white/75 shadow-[0_12px_32px_rgba(40,44,48,0.06)] transition-all duration-300 group-hover:border-neutral-400"></div>
+
                             <motion.div
-                                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300`}
+                                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-[0.04] blur-xl transition-opacity duration-300`}
                             ></motion.div>
 
                             <div className="relative p-6">
                                 {/* Title */}
-                                <h3 className="text-xl font-bold text-white mb-6 text-center group-hover:text-cyan-300 transition-colors">
+                                <h3 className="mb-6 text-left text-lg font-semibold text-neutral-900 transition-colors group-hover:text-orange-200">
                                     {category.title}
                                 </h3>
 
@@ -173,41 +155,36 @@ const Skills = () => {
                                         const IconComponent = skill.icon;
                                         return (
                                             <motion.div
-                                                key={skillIndex}
+                                                key={skill.name}
                                                 initial={{ opacity: 1, scale: 1 }}
                                                 whileInView={{ opacity: 1, scale: 1 }}
                                                 transition={{ delay: skillIndex * 0.05 }}
                                                 whileHover={{ scale: 1.1, y: -5 }}
                                                 className="relative group/icon flex flex-col items-center"
                                             >
-                                                {/* Neon Glow */}
                                                 <div 
-                                                    className="absolute inset-0 rounded-xl opacity-0 group-hover/icon:opacity-100 blur-lg transition-all duration-300"
-                                                    style={{ 
-                                                        boxShadow: `0 0 20px ${skill.color}80, 0 0 40px ${skill.color}40` 
-                                                    }}
-                                                ></div>
-                                                
-                                                {/* Icon Container */}
-                                                <div 
-                                                    className="relative flex items-center justify-center w-full aspect-square rounded-xl bg-gradient-to-br from-neutral-800/90 to-neutral-900/90 border border-neutral-700 group-hover/icon:border-opacity-0 backdrop-blur-md transition-all duration-300 overflow-hidden"
+                                                    className="skill-icon-tile relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-br from-white to-neutral-100 transition-all duration-300 group-hover/icon:border-neutral-400"
                                                     style={{
-                                                        boxShadow: `inset 0 0 20px ${skill.color}20`
+                                                        boxShadow: "inset 0 1px 2px rgba(255,255,255,.9), 0 4px 10px rgba(40,44,48,.05)"
                                                     }}
                                                 >
-                                                    {/* Glossy Effect */}
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300"></div>
-                                                    
-                                                    {/* Icon */}
-                                                    <IconComponent 
-                                                        className="text-4xl relative z-10 transition-transform duration-300 group-hover/icon:scale-110" 
+                                                    <span
+                                                        className="skill-icon-badge flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200/80 sm:h-16 sm:w-16"
+                                                        style={{
+                                                            "--skill-color": skill.color,
+                                                            ...(skill.surface ? { backgroundColor: skill.surface } : {}),
+                                                        }}
+                                                    >
+                                                        <IconComponent
+                                                        aria-hidden="true"
+                                                        className="relative z-10 text-4xl transition-transform duration-300 group-hover/icon:scale-110 sm:text-5xl"
                                                         style={{ color: skill.color }}
-                                                    />
+                                                        />
+                                                    </span>
                                                 </div>
                                                 
-                                                {/* Label Below Icon */}
                                                 <div className="mt-2 text-center">
-                                                    <span className="text-xs font-semibold text-gray-300 group-hover/icon:text-white transition-colors">
+                                                    <span className="text-xs font-medium text-neutral-700">
                                                         {skill.name}
                                                     </span>
                                                 </div>

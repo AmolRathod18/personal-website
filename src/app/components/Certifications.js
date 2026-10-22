@@ -20,34 +20,34 @@ const Certifications = () => {
     ];
 
     return (
-        <div className="border-b border-neutral-900 pb-20 pt-10">
+        <div className="border-b border-neutral-300 pb-20 pt-10">
             <motion.div
                 initial={{ opacity: 1 }}
-                className="mb-20 text-center"
+                className="mb-12 border-b border-neutral-300 pb-8 text-left"
             >
-                <h2 className="section-title mb-4 bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-center text-transparent">
-                    Certifications <span className="text-sky-400">& Achievements</span>
+                <p className="field-eyebrow mb-3">06 / Continued learning</p>
+                <h2 className="field-display text-4xl text-neutral-900 sm:text-6xl">
+                    Certifications
                 </h2>
-                <div className="h-1 w-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full mx-auto mb-3"></div>
-                <p className="section-description">
+                <p className="mt-4 text-neutral-600">
                     Professional certifications and continuous learning achievements
                 </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            <div className="mx-auto grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
                 {certifications.map((cert, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 1 }}
                         className="group relative"
                     >
-                        <div className="bg-gradient-to-br from-neutral-900/70 to-neutral-800/50 border border-sky-500/20 hover:border-sky-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/20">
+                        <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white/75 shadow-[0_12px_32px_rgba(40,44,48,0.06)] transition-all duration-300 hover:border-neutral-400 hover:shadow-xl">
                             {/* Certificate Icon/Badge */}
-                            <div className="relative bg-gradient-to-br from-sky-900/30 to-blue-900/30 p-6 flex items-center justify-center">
+                            <div className="relative flex items-center justify-center border-b border-neutral-200 bg-gradient-to-br from-neutral-100 to-white p-6">
                                 <motion.div
                                     whileHover={{ scale: 1.1, rotate: 5 }}
                                     transition={{ duration: 0.3 }}
-                                    className="w-20 h-20 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg"
+                                    className="flex h-20 w-20 items-center justify-center rounded-full border border-white bg-gradient-to-br from-neutral-200 to-neutral-400 shadow-[inset_0_2px_3px_rgba(255,255,255,.9),0_8px_18px_rgba(40,44,48,.14)]"
                                 >
                                     <FaAward className="text-white text-4xl" />
                                 </motion.div>
@@ -76,7 +76,7 @@ const Certifications = () => {
                                         <motion.span
                                             key={skillIndex}
                                             whileHover={{ scale: 1.1, y: -2 }}
-                                            className="px-3 py-1 bg-gradient-to-r from-blue-900/50 to-neutral-900/50 border border-sky-500/20 rounded-full text-xs text-sky-200"
+                                            className="rounded-full border border-neutral-300 bg-neutral-100 px-3 py-1 text-xs text-neutral-600"
                                         >
                                             {skill}
                                         </motion.span>

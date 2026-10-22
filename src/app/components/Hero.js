@@ -3,7 +3,7 @@
 import { HERO_CONTENT, HERO_STRINGS, NOW_ITEMS, STATUS } from "../constants";
 import { motion } from "motion/react";
 import profilePic from "../../../public/images/Profile.png";
-import Image from "next/image";
+import CursorReveal from "./CursorReveal";
 import TypewriterComponent from "typewriter-effect";
 import { useEffect, useState } from "react";
 
@@ -27,33 +27,35 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className="relative flex min-h-[88vh] items-center overflow-hidden pb-16 pt-10 lg:pb-24">
-            <div className="relative z-10 grid w-full items-center gap-12 lg:grid-cols-2">
+        <div className="relative flex min-h-[84vh] items-center overflow-hidden pb-20 pt-16 lg:pb-24 lg:pt-20">
+            <div className="pointer-events-none absolute -right-20 top-16 h-80 w-80 rounded-full bg-white/70 blur-[100px]" />
+            <div className="relative z-10 grid w-full items-center gap-12 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
                 <div className="text-center lg:text-left">
                     <motion.div
                         variants={container(0.05)}
                         initial="hidden"
                         animate="visible"
-                        className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300"
+                        className="field-eyebrow mb-8 inline-flex items-center gap-3"
                     >
-                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-                        {STATUS.availability}
+                        <span className="h-px w-8 bg-orange-300" />
+                        Amol Rathod / field notes 01 — software in practice
                     </motion.div>
 
                     <motion.h1
                         variants={container(0.15)}
                         initial="hidden"
                         animate="visible"
-                        className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
+                        className="field-display mx-auto max-w-3xl text-5xl leading-[0.98] text-[#f1eee4] sm:text-7xl lg:mx-0 lg:text-[5.5rem]"
                     >
-                        Amol Rathod
+                        Built for the{" "}
+                        <span className="italic text-orange-300">real world.</span>
                     </motion.h1>
 
                     <motion.div
                         variants={container(0.25)}
                         initial="hidden"
                         animate="visible"
-                        className="mt-4 text-xl font-semibold text-sky-300 sm:text-2xl"
+                        className="mt-7 font-mono text-xs uppercase tracking-[0.18em] text-neutral-300 sm:text-sm"
                     >
                         <TypewriterComponent
                             options={{
@@ -71,30 +73,30 @@ export const Hero = () => {
                         variants={container(0.35)}
                         initial="hidden"
                         animate="visible"
-                        className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-neutral-300 lg:mx-0"
+                        className="mx-auto mt-6 max-w-xl text-base leading-8 text-neutral-300 sm:text-lg lg:mx-0"
                     >
                         {HERO_CONTENT}
                     </motion.p>
 
-                    <motion.p
+                    <motion.div
                         variants={container(0.42)}
                         initial="hidden"
                         animate="visible"
-                        className="mx-auto mt-4 max-w-xl text-sm text-neutral-400 lg:mx-0"
+                        className="mx-auto mt-7 flex max-w-xl items-start gap-4 border-l border-orange-300/50 pl-4 text-left lg:mx-0"
                     >
-                        <span className="mr-2 font-mono text-sky-400">now/</span>
-                        {NOW_ITEMS[nowIndex]}
-                    </motion.p>
+                        <span className="field-eyebrow shrink-0 pt-1">Currently</span>
+                        <p className="text-sm leading-relaxed text-neutral-400">{NOW_ITEMS[nowIndex]}</p>
+                    </motion.div>
 
                     <motion.div
                         variants={container(0.5)}
                         initial="hidden"
                         animate="visible"
-                        className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start"
+                        className="mt-9 flex flex-col items-center gap-3 sm:flex-row lg:justify-start"
                     >
                         <a
                             href="#projects"
-                            className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:bg-sky-400"
+                            className="rounded-full bg-orange-300 px-6 py-3 text-sm font-semibold text-[#17120f] shadow-lg shadow-orange-950/30 transition hover:bg-orange-200"
                         >
                             View selected work
                         </a>
@@ -102,41 +104,47 @@ export const Hero = () => {
                             href="/Amol_Rathod_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-sky-400"
+                            className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-orange-300 hover:text-orange-200"
                         >
                             Download CV
                         </a>
                         <a
-                            href="#terminal"
-                            className="text-sm font-medium text-neutral-400 underline-offset-4 hover:text-sky-300 hover:underline"
+                            href="#experience"
+                            className="text-sm font-medium text-neutral-400 underline-offset-4 hover:text-orange-200 hover:underline"
                         >
-                            Open live terminal
+                            How I work
                         </a>
                     </motion.div>
 
-                    <p className="mt-6 hidden text-xs text-neutral-500 lg:block">
-                        Press <kbd className="rounded border border-white/20 bg-white/5 px-1.5 py-0.5 font-mono">Ctrl</kbd>{" "}
-                        + <kbd className="rounded border border-white/20 bg-white/5 px-1.5 py-0.5 font-mono">K</kbd> for
-                        the command palette.
-                    </p>
+                    <div className="mt-12 flex items-center justify-center gap-3 text-left lg:justify-start">
+                        <span className="field-eyebrow text-[10px]">Amol Rathod</span>
+                        <span className="h-px w-8 bg-white/15" />
+                        <span className="text-xs text-neutral-500">{STATUS.location}</span>
+                    </div>
                 </div>
 
                 <motion.div
                     initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
-                    className="relative"
+                    className="relative mx-auto w-full max-w-[360px]"
                 >
-                    <div className="absolute inset-8 rounded-full bg-sky-500/20 blur-3xl" />
-                    <Image
-                        src={profilePic}
-                        alt="Amol Rathod, full stack developer"
-                        className="relative z-10 mx-auto w-full max-w-md rounded-[2.5rem] object-cover shadow-2xl"
-                        priority
-                    />
-                    <div className="absolute -bottom-4 left-1/2 z-20 -translate-x-1/2 rounded-2xl border border-white/15 bg-black/80 px-6 py-2 text-center backdrop-blur-md">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-white">Full Stack Developer</p>
-                        <p className="text-[10px] text-neutral-400">MERN · Flask · Cloud · Security</p>
+                    <div className="absolute -inset-4 rounded-[2rem] border border-orange-200/10" />
+                    <div className="absolute -inset-10 rounded-full bg-neutral-400/20 blur-3xl" />
+                    <div className="relative overflow-hidden rounded-[1.5rem] border border-white bg-white/80 p-3 shadow-[0_24px_64px_rgba(40,44,48,0.16)]">
+                        <div className="mb-3 flex items-center justify-between px-1">
+                            <span className="field-eyebrow text-[9px]">Portrait / Bengaluru</span>
+                            <span className="font-mono text-[9px] text-neutral-600">001—026</span>
+                        </div>
+                        <CursorReveal
+                            src={profilePic}
+                            alt="Amol Rathod, full stack developer"
+                            className="aspect-[4/4.5] w-full rounded-xl"
+                        />
+                        <div className="flex items-center justify-between px-1 pt-3">
+                            <p className="text-xs font-medium text-neutral-200">Building with intent.</p>
+                            <span className="h-2 w-2 rounded-full bg-neutral-500 shadow-[0_0_12px_rgba(90,96,100,.35)]" />
+                        </div>
                     </div>
                 </motion.div>
             </div>

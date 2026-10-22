@@ -7,7 +7,6 @@ import { CONTACT, SOCIALS } from "../constants";
 const ACTIONS = [
     { id: "home", label: "Go to Home", hint: "Section", href: "#home", keywords: "top hero" },
     { id: "about", label: "Go to About", hint: "Section", href: "#about", keywords: "bio" },
-    { id: "terminal", label: "Open live terminal", hint: "Feature", href: "#terminal", keywords: "cli console commands" },
     { id: "experience", label: "Go to Experience", hint: "Section", href: "#experience", keywords: "work" },
     { id: "education", label: "Go to Education", hint: "Section", href: "#education", keywords: "college mca" },
     { id: "skills", label: "Go to Skills", hint: "Section", href: "#skills", keywords: "stack tech" },
@@ -108,7 +107,7 @@ const CommandPalette = ({ onToast }) => {
                         animate={{ y: 0, opacity: 1, scale: 1 }}
                         exit={{ y: 12, opacity: 0, scale: 0.98 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220]/95 shadow-2xl shadow-sky-950/40"
+                        className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-neutral-200 bg-white/95 shadow-2xl shadow-neutral-900/15"
                     >
                         <div className="border-b border-white/10 px-4 py-3">
                             <input

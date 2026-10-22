@@ -2,7 +2,6 @@
 
 import { ABOUT_HIGHLIGHTS, ABOUT_ME } from "../constants";
 import { motion } from "motion/react";
-import aboutmePic from "../../../public/images/aboutme.webp";
 import Image from "next/image";
 
 const STATS = [
@@ -18,12 +17,12 @@ export const About = () => {
                 initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-14 text-center"
+                className="mb-12 border-b border-neutral-300 pb-8 text-left"
             >
-                <h2 className="section-title text-white">
-                    About <span className="text-sky-400">me</span>
+                <p className="field-eyebrow mb-3">04 / A little context</p>
+                <h2 className="field-display text-4xl text-neutral-900 sm:text-6xl">
+                    About <span className="italic text-neutral-500">Amol.</span>
                 </h2>
-                <div className="mx-auto mt-3 h-1 w-14 rounded-full bg-sky-500" />
             </motion.div>
 
             <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -33,11 +32,15 @@ export const About = () => {
                     viewport={{ once: true }}
                     className="flex justify-center"
                 >
-                    <Image
-                        src={aboutmePic}
-                        alt="Portrait of Amol Rathod"
-                        className="h-64 w-64 rounded-full object-cover ring-4 ring-sky-500/40 lg:h-72 lg:w-72"
-                    />
+                    <div className="relative aspect-[4/5] w-full max-w-[24rem] overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100 shadow-[0_18px_44px_rgba(40,44,48,0.16)]">
+                        <Image
+                            src="/images/Amol_Laptop.jpeg"
+                            alt="Amol Rathod working at his laptop"
+                            fill
+                            sizes="(max-width: 1024px) 80vw, 384px"
+                            className="object-cover object-[center_35%]"
+                        />
+                    </div>
                 </motion.div>
 
                 <motion.div
@@ -52,7 +55,7 @@ export const About = () => {
                         {ABOUT_HIGHLIGHTS.map((item) => (
                             <div
                                 key={item.title}
-                                className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
+                                className="rounded-xl border border-neutral-200 bg-white/70 p-4 shadow-sm"
                             >
                                 <p className="text-sm font-semibold text-white">{item.title}</p>
                                 <p className="mt-1 text-xs leading-relaxed text-neutral-400">{item.detail}</p>
